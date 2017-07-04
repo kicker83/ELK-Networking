@@ -2,6 +2,7 @@
 #This repository contains different configurations for logstash, elasticsearch and kibana.
 
 #logstash configuration files directory: /etc/logstash/conf.d/
+
 #elasticsearch templates: 
 #Just paste entire text files into your development console in Kibana.
 #Or execute this on your elasticsearch server:
