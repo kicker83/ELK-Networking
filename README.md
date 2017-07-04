@@ -1,5 +1,5 @@
 # ELK-Networking
-# This repository contains different configurations for logstash, elasticsearch and kibana.
+#This repository contains different configurations for logstash, elasticsearch and kibana.
 
 # logstash configuration files directory: /etc/logstash/conf.d/
 # elasticsearch templates: 
