@@ -1,0 +1,27 @@
+[
+  {
+    "_id": "BlueCoat_Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BlueCoat_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"HTTP_Method_Count\",\"panelIndex\":3,\"row\":6,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"BlueCoat_HTTP_Action_Top15\",\"panelIndex\":4,\"row\":6,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"Bluecoat_HTTP_Destination_Hosts_Top15\",\"panelIndex\":5,\"row\":12,\"size_x\":4,\"size_y\":5,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Bluecoat_HTTP_UserAgent_Top15\",\"panelIndex\":6,\"row\":12,\"size_x\":4,\"size_y\":5,\"type\":\"visualization\"},{\"col\":5,\"id\":\"Bluecoat_UserRequests_Top15\",\"panelIndex\":7,\"row\":12,\"size_x\":4,\"size_y\":5,\"type\":\"visualization\"},{\"col\":5,\"id\":\"Bluecoat_HTTP_ContentType_Top15\",\"panelIndex\":8,\"row\":2,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Bluecoat_HTTP_Category_Count_Top15\",\"panelIndex\":9,\"row\":2,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":10,\"id\":\"Bluecoat_UserAgentOS_Top10\",\"panelIndex\":11,\"row\":6,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"Bluecoat_Users_SumOfBytes_Top15\",\"panelIndex\":14,\"row\":2,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"Bluecoat_SC-Filter-Result_Top15\",\"panelIndex\":15,\"row\":6,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"5a510e70-1aaf-11e7-8702-bf6a2f002df4\",\"panelIndex\":18,\"row\":9,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"81118ab0-1ab6-11e7-8702-bf6a2f002df4\",\"panelIndex\":19,\"row\":9,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":3,\"id\":\"67696550-1b7a-11e7-b828-b1077ad4a591\",\"panelIndex\":20,\"row\":1,\"size_x\":8,\"size_y\":1,\"type\":\"visualization\"},{\"col\":9,\"id\":\"2bf2cae0-566f-11e7-8f65-45fe29c2a79e\",\"panelIndex\":21,\"row\":9,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{\"P-14\":{\"vis\":{\"legendOpen\":false}},\"P-5\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-6\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-7\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-8\":{\"vis\":{\"legendOpen\":false}},\"P-9\":{\"vis\":{\"legendOpen\":false}}}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "10 seconds",
+        "pause": true,
+        "section": 1,
+        "value": 10000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]
