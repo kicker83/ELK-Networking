@@ -4,7 +4,7 @@
 #logstash configuration files directory: /etc/logstash/conf.d/
 
 #elasticsearch templates: 
-#Just paste entire text files into your development console in Kibana.
+##Just paste entire text files into your development console in Kibana.
 #Or execute this on your elasticsearch server:
 #curl -XPUT localhost:9200/_template/pravail-logs -d '
 #{
