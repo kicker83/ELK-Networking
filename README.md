@@ -4,19 +4,19 @@ This repository contains different configurations for logstash, elasticsearch an
 # Logstash
 Configuration files directory: /etc/logstash/conf.d/
 
-# elasticsearch 
-templates: 
+# Elasticsearch 
+Templates: 
 
 Just paste entire text files into your development console in Kibana.
 
 Or execute this on your elasticsearch server:
 
-curl -XPUT localhost:9200/_template/pravail-logs -d '
+curl -XPUT localhost:9200/_template/name -d '
 {
 content
 }
 '
-# kibana
+# Kibana
 
 Visualizations (import json on kibana -> Management -> Saved objects)
 
