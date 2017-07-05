@@ -1,6 +1,17 @@
 # ELK-Networking
 This repository contains different configurations for logstash, elasticsearch and kibana.
 
+Devices included:
+
+- Firewall Palo Alto traffic and URL.
+- Firewall Juniper NetScreen.
+- Firewall Juniper SRX.
+- Bluecoat SG traffic.
+- Bluecoat SG SysLog.
+- Arbor Pravail DDoS.
+- Proxy Squid.
+- Nginx WebServer.
+
 # Logstash
 Configuration files directory: /etc/logstash/conf.d/
 
