@@ -1,7 +1,7 @@
 # ELK-Networking
 This repository contains different configurations for logstash, elasticsearch and kibana.
 
-Devices included:
+Devices / Products included:
 
 - Firewall Palo Alto traffic and URL.
 - Firewall Juniper NetScreen.
