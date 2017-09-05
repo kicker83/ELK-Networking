@@ -1,0 +1,35 @@
+### INPUT ###
+input {
+  file {
+                  sincedb_path => "/var/log/logstash/checkpointdb"
+                  start_position => "beginning"
+                  path => "/var/log/syslogs-kibana/checkpoint-traffic.log"
+                  type => "checkpoint"
+  }
+}
+### FILTER ###
+filter {
+#### CHECKPOINT ####
+  if [type] == "checkpoint" {
+      grok {
+        match => [ "message", "%{TIMESTAMP_ISO8601}%{SPACE}%{HOSTNAME}%{SPACE}%{TIMESTAMP_ISO8601:realdate}%{SPACE}%{HOSTNAME:device}%{SPACE}%{NOTSPACE:name}%{SPACE}%{NOTSPACE}%{SPACE}%{NOTSPACE}%{SPACE}%{NOTSPACE}%{SPACE}%{GREEDYDATA:raw_message}" ]
+      }
+    kv {
+          source => "raw_message"
+          allow_duplicate_values => true
+    }
+    mutate {
+      remove_field => ["message","raw_message"]
+    }
+  }
+}
+### OUTPUT ###
+output {
+  if [type] == "checkpoint"
+  {
+    elasticsearch {
+      index => "checkpoint-logs"
+      hosts => ["elasticsearchlab02:9200"]
+    }#endelasticsearch
+  }#endif
+}
