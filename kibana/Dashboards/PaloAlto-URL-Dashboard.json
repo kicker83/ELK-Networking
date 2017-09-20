@@ -1,18 +1,25 @@
 [
   {
-    "_id": "d06440b0-1397-11e7-a7d7-41b683750b4a",
+    "_id": "AV6f1xiVRQz7pa3DYBqP",
     "_type": "dashboard",
     "_source": {
-      "title": "PaloAlto_URL",
+      "title": "PaloAlto-URL Dashboard",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":1,\"id\":\"28416a40-1395-11e7-a7d7-41b683750b4a\",\"panelIndex\":1,\"row\":4,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"PaloAlto_BlockURL_Count\",\"panelIndex\":2,\"row\":8,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"Top15_URLCategory\",\"panelIndex\":3,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"2b060120-1398-11e7-a7d7-41b683750b4a\",\"panelIndex\":5,\"row\":4,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":9,\"id\":\"f6246090-1ac8-11e7-8702-bf6a2f002df4\",\"panelIndex\":6,\"row\":4,\"size_x\":4,\"size_y\":4,\"type\":\"visualization\"},{\"col\":5,\"id\":\"b3abefd0-1ad7-11e7-8702-bf6a2f002df4\",\"panelIndex\":7,\"row\":8,\"size_x\":8,\"size_y\":4,\"type\":\"visualization\"},{\"col\":5,\"id\":\"0351b000-1ad9-11e7-8702-bf6a2f002df4\",\"panelIndex\":8,\"row\":1,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"size_x\":4,\"size_y\":3,\"panelIndex\":9,\"type\":\"visualization\",\"id\":\"b4681da0-5a82-11e7-8e2b-eb47e6b96b2f\",\"col\":9,\"row\":1}]",
+      "panelsJSON": "[{\"col\":10,\"id\":\"AV6f04RqRQz7pa3DXA-6\",\"panelIndex\":1,\"row\":4,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":4,\"id\":\"AV6f0_LpRQz7pa3DXI-f\",\"panelIndex\":2,\"row\":4,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"AV6f0yNYRQz7pa3DW501\",\"panelIndex\":3,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"AV6f0tPJRQz7pa3DW0Tk\",\"panelIndex\":4,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"AV6f1Zg6RQz7pa3DXlgU\",\"panelIndex\":5,\"row\":7,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"AV6f2OpRRQz7pa3DYjry\",\"panelIndex\":6,\"row\":7,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"AV6f2dhIRQz7pa3DY0LI\",\"panelIndex\":7,\"row\":4,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"AV6f2hT4RQz7pa3DY4d5\",\"panelIndex\":8,\"row\":4,\"size_x\":3,\"size_y\":3,\"type\":\"visualization\"}]",
       "optionsJSON": "{\"darkTheme\":true}",
-      "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-5\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-6\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"P-7\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+      "uiStateJSON": "{\"P-6\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
       "version": 1,
-      "timeRestore": false,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"match_all\":{}}}],\"highlightAll\":true,\"version\":true}"
       }
     }
   }
