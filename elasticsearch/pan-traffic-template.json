@@ -78,8 +78,7 @@ PUT /_template/pan-traffic
 		"norms": "false",
 		"fields":{
 		  "keyword" : {
-			"type" : "keyword",
-			"index" : "false"
+			"type" : "keyword"
 		  }
 		}
 	},
