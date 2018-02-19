@@ -161,8 +161,8 @@ services:
     image: 'balabit/syslog-ng'
     container_name: syslogng-srv01
     ports:
-      - "514/tcp:514/tcp"
-      - "514/udp:514/udp"
+      - "514:514"
+      - "514:514/udp"
       - "601:601"
       - "6514:6514"
     volumes:
