@@ -156,6 +156,7 @@ services:
     depends_on:
       - elasticsearch        
 
+  ### SYSLOG-NG ###
   syslog-ng:
     image: 'balabit/syslog-ng'
     container_name: syslogng-srv01
@@ -168,3 +169,10 @@ services:
       - "/var/lib/vz/docker/docker-compose-files/ELK/syslog-ng/logs:/var/log/syslogs-kibana"
       - "/var/lib/vz/docker/docker-compose-files/ELK/syslog-ng/socket:/var/run/syslog-ng"
       - "/var/lib/vz/docker/docker-compose-files/ELK/syslog-ng/config/:/etc/syslog-ng"
+	  
+  ### PORTAINER ###
+  portainer:
+    image: 'portainer/portainer'
+    container-name: portainer
+    ports:
+      - "9000:9000"
