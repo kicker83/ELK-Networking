@@ -118,7 +118,7 @@ services:
 
   ### LOGSTASH ###
   logstash:
-    image: 'docker.elastic.co/logstash/logstash:6.2.1'
+    image: 'docker.elastic.co/logstash/logstash-oss:6.2.1'
     container_name: logstash-srv01
     ports:
       - "5000:5000"
