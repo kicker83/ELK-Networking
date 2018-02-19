@@ -1,0 +1,169 @@
+version: '3'
+
+services:
+  ### MASTER + DATA NODE ###
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.1
+    container_name: elasticsearch-srv01
+    ports:
+      - "9200:9200"
+    environment:
+      cluster.name: elk-cluster01
+      transport.host: 0.0.0.0
+      discovery.zen.ping.unicast.hosts: elasticsearch
+      discovery.zen.minimum_master_nodes: 1
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g -XX:-AssumeMP"
+      ELASTIC_PASSWORD: "changeme"
+      #xpack.security.enabled: "false"
+      #xpack.monitoring.enabled: "false"
+      #xpack.ml.enabled: "false"
+      #xpack.graph.enabled: "false"
+      #xpack.watcher.enabled: "false"
+      http.cors.enabled: "true"
+      http.cors.allow-origin: "*"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - /var/lib/vz/docker/docker-compose-files/ELK/elasticsearch/elasticsearch-srv01/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+  ### DATA NODE ###
+  elasticsearch2:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.1
+    container_name: elasticsearch-srv02
+    ports:
+      - "9201:9200"
+    environment:
+      cluster.name: elk-cluster01
+      transport.host: 0.0.0.0
+      discovery.zen.ping.unicast.hosts: elasticsearch
+      discovery.zen.minimum_master_nodes: 1
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g -XX:-AssumeMP"
+      ELASTIC_PASSWORD: "changeme"
+      #xpack.security.enabled: "false"
+      #xpack.monitoring.enabled: "false"
+      #xpack.ml.enabled: "false"
+      #xpack.graph.enabled: "false"
+      #xpack.watcher.enabled: "false"
+      http.cors.enabled: "true"
+      http.cors.allow-origin: "*"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - /var/lib/vz/docker/docker-compose-files/ELK/elasticsearch/elasticsearch-srv02/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    links:
+      - elasticsearch    
+  ### INGEST NODE ###
+  elasticsearch3:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.1
+    container_name: elasticsearch-srv03
+    ports:
+      - "9202:9200"
+    environment:
+      cluster.name: elk-cluster01
+      transport.host: 0.0.0.0
+      discovery.zen.ping.unicast.hosts: elasticsearch
+      discovery.zen.minimum_master_nodes: 1
+      ES_JAVA_OPTS: "-Xms1g -Xmx1g -XX:-AssumeMP"
+      ELASTIC_PASSWORD: "changeme"
+      #xpack.security.enabled: "false"
+      #xpack.monitoring.enabled: "false"
+      #xpack.ml.enabled: "false"
+      #xpack.graph.enabled: "false"
+      #xpack.watcher.enabled: "false"
+      http.cors.enabled: "true"
+      http.cors.allow-origin: "*"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - /var/lib/vz/docker/docker-compose-files/ELK/elasticsearch/elasticsearch-srv03/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    links:
+      - elasticsearch
+      - elasticsearch2
+
+  ### TRIBE NODE ###
+  elasticsearch4:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.2.1
+    container_name: elasticsearch-srv04
+    ports:
+      - "9203:9200"
+    environment:
+      cluster.name: elk-cluster01
+      transport.host: 0.0.0.0
+      discovery.zen.ping.unicast.hosts: elasticsearch
+      discovery.zen.minimum_master_nodes: 1
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m -XX:-AssumeMP"
+      ELASTIC_PASSWORD: "changeme"
+      #xpack.security.enabled: "false"
+      #xpack.monitoring.enabled: "false"
+      #xpack.ml.enabled: "false"
+      #xpack.graph.enabled: "false"
+      #xpack.watcher.enabled: "false"
+      http.cors.enabled: "true"
+      http.cors.allow-origin: "*"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - /var/lib/vz/docker/docker-compose-files/ELK/elasticsearch/elasticsearch-srv04/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    links:
+      - elasticsearch
+      - elasticsearch2
+      - elasticsearch3
+
+  ### LOGSTASH ###
+  logstash:
+    image: 'docker.elastic.co/logstash/logstash:6.2.1'
+    container_name: logstash-srv01
+    ports:
+      - "5000:5000"
+    environment:
+      #xpack.security.enabled: "false"
+      LS_JAVA_OPTS: "-Xmx1g -Xms1g"
+    volumes:
+      - /var/lib/vz/docker/docker-compose-files/ELK/logstash/GeoLite2-City.mmdb:/usr/share/logstash/GeoLite2-City.mmdb
+      - /var/lib/vz/docker/docker-compose-files/ELK/logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      #- /var/lib/vz/docker/docker-compose-files/ELK/logstash/pipeline:/usr/share/logstash/pipeline
+      - /var/lib/vz/docker/docker-compose-files/ELK/logstash/conf.d:/etc/logstash/conf.d
+      - /var/lib/vz/docker/docker-compose-files/ELK/syslog-ng/logs:/var/log/syslogs-kibana
+      - /var/lib/vz/docker/docker-compose-files/ELK/logstash/config/log4j2.properties:/usr/share/logstash/config/log4j2.properties
+      - /var/lib/vz/docker/docker-compose-files/ELK/elasticsearch/templates:/etc/logstash/templates
+    #command: logstash -f /usr/share/logstash/config/logstash.yml
+    links:
+      - elasticsearch
+    depends_on:
+      - kibana
+
+  ### KIBANA ###
+  kibana:
+    image: 'docker.elastic.co/kibana/kibana:6.2.1'
+    container_name: kibana-srv01
+    volumes:
+      - /var/lib/vz/docker/docker-compose-files/ELK/kibana/config/:/usr/share/kibana/config      
+    ports:
+      - "5601:5601"
+    environment:
+      #xpack.security.enabled: "false"
+      ELASTICSEARCH_USERNAME: "elastic"
+      ELASTICSEARCH_PASSWORD: "changeme"
+    links:
+      - elasticsearch
+    depends_on:
+      - elasticsearch        
+
+  syslog-ng:
+    image: 'balabit/syslog-ng'
+    container_name: syslogng-srv01
+    ports:
+      - "514:514"
+      - "601:601"
+      - "6514:6514"
+    volumes:
+      - "/var/lib/vz/docker/docker-compose-files/ELK/syslog-ng/logs:/var/log/syslogs-kibana"
+      - "/var/lib/vz/docker/docker-compose-files/ELK/syslog-ng/socket:/var/run/syslog-ng"
+      - "/var/lib/vz/docker/docker-compose-files/ELK/syslog-ng/config/:/etc/syslog-ng"
