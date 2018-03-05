@@ -9,21 +9,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "AWAnAHkHwICFUdVKWPOe",
-    "_type": "visualization",
-    "_source": {
-      "title": "SquidAccess_TopDestinationURLs",
-      "visState": "{\"title\":\"SquidAccess_TopDestinationURLs\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"url_host.keyword\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
       }
     }
   },
@@ -37,7 +23,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
       }
     }
   },
@@ -51,7 +37,21 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "AWAnAHkHwICFUdVKWPOe",
+    "_type": "visualization",
+    "_source": {
+      "title": "SquidAccess_TopDestinationURLs",
+      "visState": "{\"title\":\"SquidAccess_TopDestinationURLs\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"url_host.keyword\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
       }
     }
   },
@@ -65,7 +65,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
       }
     }
   },
@@ -79,21 +79,7 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "AWAnB21qwICFUdVKZugH",
-    "_type": "visualization",
-    "_source": {
-      "title": "SquidAccess_TopSourceIPs",
-      "visState": "{\"title\":\"SquidAccess_TopSourceIPs\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"src_ip.keyword\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
-      "uiStateJSON": "{}",
-      "description": "",
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
       }
     }
   },
@@ -107,7 +93,21 @@
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"AWAm_IVswICFUdVKUBIR\",\"query\":{\"match_all\":{}},\"filter\":[]}"
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "AWAnB21qwICFUdVKZugH",
+    "_type": "visualization",
+    "_source": {
+      "title": "SquidAccess_TopSourceIPs",
+      "visState": "{\"title\":\"SquidAccess_TopSourceIPs\",\"type\":\"pie\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"src_ip.keyword\",\"size\":15,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"f3ac1b10-1e36-11e8-8587-c15f47339c30\",\"query\":{\"query\":{\"match_all\":{}},\"language\":\"lucene\"},\"filter\":[]}"
       }
     }
   }
