@@ -1,7 +1,7 @@
 ### TEMPLATE PAN-URL
 PUT /_template/pan-url
 {  
-	"template": "pan-url-*",
+	"index_patterns": ["pan-url-*"],
 	"settings" : {
 		"number_of_shards" : 3,
 		"number_of_replicas" : 0,
