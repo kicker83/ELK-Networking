@@ -1,7 +1,7 @@
 ### TEMPLATE PRAVAIL-LOGS
 PUT /_template/pravail-logs
 {  
-	"template": "pravail-logs-*",
+	"index_patterns": ["pravail-logs-*"],
 	"settings" : {
 		"number_of_shards" : 1,
 		"number_of_replicas" : 0,
