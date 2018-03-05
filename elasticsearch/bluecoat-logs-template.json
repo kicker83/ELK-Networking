@@ -1,14 +1,14 @@
 ### TEMPLATE BLUECOAT-LOGS
 PUT /_template/bluecoat-logs
 {
-	"template": "bluecoat-logs-*",
+	"index_patterns": ["bluecoat-logs-*"],
     "settings" : {
         "number_of_shards" : 3,
         "number_of_replicas" : 0,
 		"index.refresh_interval" : "10s"
     },
     "mappings" : {
-      "proxy" : {
+      "doc" : {
         "properties" : {
           "@timestamp" : {
             "type" : "date"
