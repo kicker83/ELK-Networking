@@ -1,0 +1,10 @@
+### TEMPLATE PASYSLOG
+PUT /_template/pasyslog
+{  
+	"index_patterns": ["pasyslog-*"],
+	"settings" : {
+		"number_of_shards" : 1,
+		"number_of_replicas" : 0,
+		"index.refresh_interval" : "10s"
+	}
+}
