@@ -1,0 +1,10 @@
+### TEMPLATE CHECKPOINT-LOGS
+PUT /_template/checkpoint-logs
+{  
+	"index_patterns": ["checkpoint-logs-*"],
+	"settings" : {
+		"number_of_shards" : 3,
+		"number_of_replicas" : 0,
+		"index.refresh_interval" : "10s"
+	}
+}
