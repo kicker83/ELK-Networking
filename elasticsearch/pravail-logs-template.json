@@ -8,7 +8,7 @@ PUT /_template/pravail-logs
 		"index.refresh_interval" : "10s"
 	},
 	"mappings" : {
-	  "traffic" : {
+	  "doc" : {
 		"properties" : {
 		  "@timestamp" : {
 			"type" : "date"
