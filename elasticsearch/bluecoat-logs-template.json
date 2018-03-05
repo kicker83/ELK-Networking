@@ -1,7 +1,7 @@
 ### TEMPLATE BLUECOAT-LOGS
 PUT /_template/bluecoat-logs
 {
-	"index_patterns": ["bluecoat-logs-*"],
+    "index_patterns": ["bluecoat-logs-*"],
     "settings" : {
         "number_of_shards" : 3,
         "number_of_replicas" : 0,
