@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "98eddc30-9471-11e7-97fb-638fabcc1e4d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Checkpoint_VPNCommunities_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"7d8c4c70-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":1,\"row\":10,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"399501b0-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":2,\"row\":10,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"05956440-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":3,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"992b2e20-9212-11e7-9aa6-35baef0417cd\",\"panelIndex\":7,\"row\":7,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"4d592050-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":8,\"row\":4,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"892e53e0-9216-11e7-8c4e-ddc3f34698b7\",\"panelIndex\":9,\"row\":7,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"61381490-9471-11e7-97fb-638fabcc1e4d\",\"panelIndex\":12,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":7,\"id\":\"1887e690-947a-11e7-be15-07c643dea504\",\"panelIndex\":13,\"row\":1,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":true}",
+      "uiStateJSON": "{}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]
