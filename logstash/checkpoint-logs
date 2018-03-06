@@ -5,6 +5,9 @@ input {
                   start_position => "beginning"
                   path => "/var/log/syslogs-kibana/checkpoint-traffic.log"
                   type => "checkpoint"
+                  codec => plain {
+                      charset => "ISO-8859-1"
+                  }                  
   }
 }
 ### FILTER ###
