@@ -1,0 +1,42 @@
+input {
+        file {
+                        sincedb_path => "/var/log/logstash/weblogic-asf50db"
+                        start_position => "beginning"
+                        path => ["/var/log/syslogs-kibana/weblogic-asf50.log"]
+                        type => "weblogic-asf50"
+                        codec => multiline 
+                        {
+                          pattern => "^####"
+                          negate => true
+                          what => "previous"
+                        }
+        }
+}
+### FILTER ###
+filter {
+#### Weblogic ASF50 ####
+  if [type] == "weblogic-asf50" {
+    grok {
+      match => {
+        "message" => '####<%{TIMESTAMP_ISO8601:timestamp}> <%{NOTSPACE:level}> <%{NOTSPACE:id_thread}> <%{NOTSPACE:server}> <%{NOTSPACE:node}> <%{DATA:clase}> <%{DATA:product}> <> <> <%{NOTSPACE} <%{NOTSPACE:transaction}> <%{GREEDYDATA:result}>'
+      }
+    }
+                date {
+                        #match => ["timestamp", "YYYY-MM-dd HH:mm:ss" ]
+                        match => ["timestamp", "ISO8601" ]
+                        timezone => "Europe/Madrid"
+                        target => "realdate"
+                  }
+  mutate {
+        remove_field => [ "message" ]
+  }
+}
+output {
+  if [type] == "weblogic-asf50"
+  {
+    elasticsearch {
+    index => "weblogic-asf50-%{+YYYY.MM.dd}"
+    hosts => ["elasticsearchlab02:9200"]
+    }#endelasticsearch
+  }
+} #end output block
