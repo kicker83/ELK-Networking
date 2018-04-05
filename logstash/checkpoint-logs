@@ -19,6 +19,7 @@ filter {
       }
     kv {
           source => "raw_message"
+          value_split => "=\""
           allow_duplicate_values => true
     }
     mutate {
