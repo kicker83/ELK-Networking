@@ -1,14 +1,14 @@
 ### TEMPLATE PAN-TRAFFIC
 PUT /_template/pan-traffic
 {  
-	"template": "pan-traffic-*",
+	"index_patterns": ["pan-traffic-*"],
 	"settings" : {
 		"number_of_shards" : 3,
 		"number_of_replicas" : 0,
 		"index.refresh_interval" : "10s"
 	},
 	"mappings" : {
-	  "traffic" : {
+	  "doc" : {
 		"properties" : {
 		  "@timestamp" : {
 			"type" : "date"
@@ -91,56 +91,56 @@ PUT /_template/pan-traffic
 			"city_name":{
 					"type":"keyword",
 					"norms": "false",
-					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "fields" : {
+					    "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256,
+                "index" : "false"
+					    }
 					}
 			},
 			"continent_code":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "keyword" : {					  
+							"type":"keyword",
+							"index":"false",
+							"ignore_above":256
+					 }
 					}
 			},
 			"country_code2":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
-					}
+					 "keyword" : {
+							"type":"keyword",
+							"index":"false",
+							"ignore_above":256
+					 }
+				  }
 			},
 			"country_code3":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "keyword" : {
+						 "type":"keyword",
+						 "index":"false",
+						 "ignore_above":256
+					  }
 					}
 			},
 			"country_name":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					  "keyword" : {
+						 "type":"keyword",
+						 "index":"false",
+						 "ignore_above":256
+					  }
 					}
 			},
 			"dma_code":{
@@ -150,11 +150,11 @@ PUT /_template/pan-traffic
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "keyword" : {
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
 					}
 			},
 			"latitude":{
@@ -170,44 +170,44 @@ PUT /_template/pan-traffic
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "keyword" : {
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
 					}
 			},
 			"real_region_name":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+           "keyword" : {
+						 "type":"keyword",
+						 "index":"false",
+						 "ignore_above":256
+           }	
 					}
 			},
 			"region_name":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "keyword" : {				  
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
 					}
 			},
 			"timezone":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "keyword" : {					  
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
 					}
 			}
 		}
@@ -247,8 +247,8 @@ PUT /_template/pan-traffic
 		"norms": "false",
 		"fields":{
 		  "keyword" : {
-			"type" : "keyword",
-			"index" : "false"
+			 "type" : "keyword",
+			 "index" : "false"
 		  }
 		}
 	},
@@ -260,8 +260,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -270,8 +270,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -280,8 +280,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -293,8 +293,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -306,8 +306,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -319,8 +319,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -329,8 +329,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -343,8 +343,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -352,8 +352,8 @@ PUT /_template/pan-traffic
 			"type":"text",
 			"norms": "false",
 			"fields":{
-			  "keyword" : {
-				"type" : "keyword"
+			   "keyword" : {
+				 "type" : "keyword"
 			  }
 			}
 		},
@@ -362,8 +362,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -372,8 +372,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -405,55 +405,50 @@ PUT /_template/pan-traffic
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"continent_code":{
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"country_code2":{
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"country_code3":{
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"country_name":{
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"dma_code":{
@@ -463,11 +458,10 @@ PUT /_template/pan-traffic
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"latitude":{
@@ -483,44 +477,40 @@ PUT /_template/pan-traffic
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"real_region_name":{
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-										"type":"keyword",
-										"index":"not_analyzed",
-										"ignore_above":256
-								}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 						}
 				},
 				"region_name":{
 						"type":"keyword",
 						"norms": "false",
 						"fields":{
-								"raw":{
-								"type":"keyword",
-								"index":"not_analyzed",
-								"ignore_above":256
-						}
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
 				}
 			},
 			"timezone":{
 					"type":"keyword",
 					"norms": "false",
 					"fields":{
-							"raw":{
-									"type":"keyword",
-									"index":"not_analyzed",
-									"ignore_above":256
-							}
+					 "keyword" : {					  
+						"type":"keyword",
+						"index":"false"
+					 }
 					}
 			}
 		}
@@ -607,8 +597,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -657,8 +647,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -667,8 +657,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -677,8 +667,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
@@ -696,24 +686,16 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		},
-		  "syslog_host" : {
-			"type" : "text",
-			"fields" : {
-			  "keyword" : {
-				"type" : "keyword"
-			  }
-			}
-		  },
 		  "tags" : {
 			"type" : "text",
 			"fields" : {
-			  "keyword" : {
-				"type" : "keyword"
+			   "keyword" : {
+				 "type" : "keyword"
 			  }
 			}
 		  },
@@ -722,8 +704,8 @@ PUT /_template/pan-traffic
 			"norms": "false",
 			"fields":{
 			  "keyword" : {
-				"type" : "keyword",
-				"index" : "false"
+				 "type" : "keyword",
+				 "index" : "false"
 			  }
 			}
 		}
