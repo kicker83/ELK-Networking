@@ -20,8 +20,8 @@ PUT /_template/pan-traffic
 				"type" : "keyword"
 			  }
 			}
-		  },
-	"Action":{
+		},
+	  "Action":{
 		"type":"text",
 		"norms": "false",
 		"fields":{
@@ -29,7 +29,7 @@ PUT /_template/pan-traffic
 			"type" : "keyword"
 		  }
 		}
-	},
+	  },
 	  "Application" : {
 		"type" : "text",
 		"fields" : {
@@ -86,40 +86,40 @@ PUT /_template/pan-traffic
 		"dynamic":"true",
 		"properties":{
 			"area_code":{
-					"type":"long"
+				"type":"long"
 			},
 			"city_name":{
-					"type":"keyword",
-					"norms": "false",
-					 "fields" : {
-					    "keyword" : {
-                "type" : "keyword",
-                "ignore_above" : 256,
-                "index" : "false"
-					    }
-					}
+				"type":"keyword",
+				"norms": "false",
+				"fields" : {
+			 	  "keyword" : {
+                			"type" : "keyword",
+                			"ignore_above" : 256,
+                			"index" : "false"
+				   }
+			  }
 			},
 			"continent_code":{
+				"type":"keyword",
+				"norms": "false",
+				"fields":{
+				   "keyword" : {					  
 					"type":"keyword",
-					"norms": "false",
-					"fields":{
-					 "keyword" : {					  
-							"type":"keyword",
-							"index":"false",
-							"ignore_above":256
-					 }
-					}
+					"index":"false",
+					"ignore_above":256
+				    }
+				}
 			},
 			"country_code2":{
+				"type":"keyword",
+				"norms": "false",
+				"fields":{
+				 "keyword" : {
 					"type":"keyword",
-					"norms": "false",
-					"fields":{
-					 "keyword" : {
-							"type":"keyword",
-							"index":"false",
-							"ignore_above":256
-					 }
-				  }
+					"index":"false",
+					"ignore_above":256
+				 }
+			  }
 			},
 			"country_code3":{
 					"type":"keyword",
