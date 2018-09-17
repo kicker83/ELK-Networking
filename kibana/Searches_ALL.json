@@ -1,0 +1,644 @@
+[
+  {
+    "_id": "cb0591a0-4c4e-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_PSUAResources2",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "cs(User-Agent)",
+        "cs-method",
+        "cs-uri-scheme",
+        "cs-uri-stem",
+        "csusername",
+        "cs-host",
+        "s-action",
+        "sc-status"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"cs-uri-stem\",\"value\":\"PSUAResources2.zip\",\"params\":{\"query\":\"PSUAResources2.zip\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"PSUAResources2.zip\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"key\":\"cs-uri-stem\",\"negate\":false,\"params\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\"},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "cb7fbeb0-1e6f-11e8-8587-c15f47339c30",
+    "_type": "search",
+    "_source": {
+      "title": "Bluecoat-NewMinersAge",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "csusername",
+        "cs-method",
+        "cs-uri-scheme",
+        "cs-uri-stem",
+        "sc-filter-result",
+        "cs(User-Agent)"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*newminersage*\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "5e34b4e0-21e5-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "bluecoat_discover_unavailable",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "csusername",
+        "cs-uri-stem",
+        "cs-method",
+        "cs-host",
+        "sc-filter-category",
+        "s-action",
+        "cs(User-Agent)"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"sc-filter-category\",\"value\":\"unavailable\",\"params\":{\"query\":\"unavailable\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"sc-filter-category\":{\"query\":\"unavailable\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "43e652a0-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "bluecoat_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "csusername",
+        "cs-uri-stem",
+        "cs-method",
+        "cs-host",
+        "sc-filter-category",
+        "s-action",
+        "cs(User-Agent)"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "fa054860-2cf5-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_política04",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "cs(User-Agent)",
+        "cs-method",
+        "cs-uri-scheme",
+        "cs-uri-stem",
+        "csusername",
+        "cs-host",
+        "s-action",
+        "sc-status"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"key\":\"cs-uri-stem\",\"negate\":false,\"params\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\"},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "0d0a1da0-276f-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_políticas",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "cs(User-Agent)",
+        "cs-method",
+        "cs-uri-scheme",
+        "cs-uri-stem",
+        "csusername",
+        "cs-host",
+        "s-action",
+        "sc-status"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"key\":\"cs-uri-stem\",\"negate\":false,\"params\":{\"query\":\"enterprise.updates.pandasoftware.com/pcop/files/\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"enterprise.updates.pandasoftware.com/pcop/files/\"},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"enterprise.updates.pandasoftware.com/pcop/files/\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "aa055240-2388-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "bluecoat_ctmail",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "csusername",
+        "cs-uri-stem",
+        "cs-method",
+        "cs-host",
+        "sc-filter-category",
+        "s-action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*.ctmail.com\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "c0330060-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "pan-traffic_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceAddress",
+        "SourceUser",
+        "DestinationAddress",
+        "DestinationPort",
+        "IPProtocol",
+        "Application",
+        "Rule",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "16db2f90-2125-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "squid_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "peerhost",
+        "http_method",
+        "url_port",
+        "http_status_code"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "ea0f3fc0-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "pan-url_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "sourceIP",
+        "destinationIP",
+        "URIHost",
+        "category",
+        "action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"1b6c4c90-5f43-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "d69bbcb0-2124-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "pravail_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "blocked_host",
+        "destination",
+        "dstport",
+        "attack_type",
+        "action",
+        "hostname"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"pravail-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "08dc56f0-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "bcevent_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "clientIP",
+        "code",
+        "hostname",
+        "user",
+        "verdict"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bcevent\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "7ea7ac90-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "checkpoint_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src",
+        "dst",
+        "service_id",
+        "outgoing_url",
+        "user",
+        "product_family",
+        "device",
+        "rule",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"checkpoint-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "ee00bab0-2122-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "pasyslog_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Description",
+        "Severity",
+        "EventID",
+        "Subtype",
+        "Type",
+        "SerialNum"
+      ],
+      "sort": [
+        "GenerateTime",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"27790410-5f43-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "d4f929a0-6fdb-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "pan-traffic_92.63.193.134",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceAddress",
+        "SourceUser",
+        "DestinationAddress",
+        "DestinationPort",
+        "IPProtocol",
+        "Application",
+        "Rule",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"type\":\"phrase\",\"key\":\"SourceAddress\",\"value\":\"92.63.193.134\",\"params\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"SourceAddress\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "791e3f30-6fd6-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "checkpoint_92.63.193.134",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src",
+        "dst",
+        "device",
+        "service",
+        "rule",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"checkpoint-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"checkpoint-logs\",\"key\":\"src\",\"negate\":false,\"params\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"92.63.193.134\"},\"query\":{\"match\":{\"src\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"}}}}]}"
+      }
+    }
+  },
+  {
+    "_id": "66b1c540-72df-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "SquidAccess_ICM161_last30",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "url_port",
+        "squid_request_status"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"squidaccess-logs\",\"type\":\"phrase\",\"key\":\"src_ip\",\"value\":\"192.168.142.109\",\"params\":{\"query\":\"192.168.142.109\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"src_ip\":{\"query\":\"192.168.142.109\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "eb9192f0-7a18-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "Bluecoat_adlooxtracker_Requests",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "cs-uri-stem",
+        "s-action",
+        "sc-filter-category"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"adlooxtracking.com\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "e61094e0-8a60-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "SquidAccess_ICM162_last30",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "url_port",
+        "squid_request_status"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"index\":\"squidaccess-logs\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"src_ip\",\"value\":\"192.168.142.110\",\"params\":{\"query\":\"192.168.142.110\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"src_ip\":{\"query\":\"192.168.142.110\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "4fca2f40-b72a-11e8-827b-5db3eadf5be6",
+    "_type": "search",
+    "_source": {
+      "title": "Squidaccess_Justicia_503",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "url_path",
+        "http_status_code"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"10.80.79.200 OR 10.80.79.81\"},\"filter\":[{\"meta\":{\"index\":\"squidaccess-logs\",\"type\":\"phrase\",\"key\":\"http_status_code.keyword\",\"value\":\"503\",\"params\":{\"query\":\"503\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":false,\"alias\":null},\"query\":{\"match\":{\"http_status_code.keyword\":{\"query\":\"503\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    }
+  },
+  {
+    "_id": "95d11900-ff73-11e7-9ac0-a903174a3c8d",
+    "_type": "search",
+    "_source": {
+      "title": "Blocked URLs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Miscellaneous",
+        "Action",
+        "SourceIP",
+        "SourceUser"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"Threat_ContentType:'url' NOT Action:'alert'\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "67d21be0-ff7c-11e7-9ac0-a903174a3c8d",
+    "_type": "search",
+    "_source": {
+      "title": "Threat Logs - Warning+",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "DeviceName",
+        "severity_label",
+        "SessionID",
+        "ThreatID",
+        "Threat_ContentType",
+        "Miscellaneous",
+        "SourceIP",
+        "SourceUser",
+        "DestinationIP",
+        "DestinationUser"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"NOT ThreatID:9999 NOT Threat_ContentType:'url' NOT Severity:'low'\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "ee17eac0-ff79-11e7-9ac0-a903174a3c8d",
+    "_type": "search",
+    "_source": {
+      "title": "Config Logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Device Group Hierarchy Level 4",
+        "Admin",
+        "Host",
+        "Client",
+        "Command",
+        "severity_label",
+        "Result"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-config\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "456f93d0-ff7b-11e7-9ac0-a903174a3c8d",
+    "_type": "search",
+    "_source": {
+      "title": "System Logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Device Name",
+        "Description",
+        "Content/Threat Type",
+        "Severity"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-system\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  },
+  {
+    "_id": "f71e5530-ff7b-11e7-9ac0-a903174a3c8d",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto Threat Logs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "DeviceName",
+        "severity_label",
+        "SessionID",
+        "ThreatID",
+        "Threat_ContentType",
+        "Miscellaneous",
+        "SourceIP",
+        "SourceUser",
+        "DestinationIP",
+        "DestinationUser"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"NOT ThreatID:9999 NOT Threat_ContentType:'url'\"},\"filter\":[]}"
+      }
+    }
+  }
+]
