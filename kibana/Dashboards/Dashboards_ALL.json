@@ -1,0 +1,445 @@
+[
+  {
+    "_id": "a06e5af0-2c1d-11e7-8c63-7fc12f1d2dcb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BCEvents_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"08e78a20-2c05-11e7-8d1b-59c7f51e151e\",\"panelIndex\":1,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9c8256c0-2b38-11e7-9ca1-bf15727ca332\",\"panelIndex\":2,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"3266f2a0-2b38-11e7-9ca1-bf15727ca332\",\"panelIndex\":3,\"row\":9,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"4abc4b90-2c1c-11e7-8c63-7fc12f1d2dcb\",\"panelIndex\":4,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"bf6cecf0-2c1d-11e7-8c63-7fc12f1d2dcb\",\"panelIndex\":5,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"c363fb40-2c1e-11e7-8c63-7fc12f1d2dcb\",\"panelIndex\":6,\"row\":9,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"}]",
+      "optionsJSON": "{\"darkTheme\":false}",
+      "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}},\"P-5\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "98eddc30-9471-11e7-97fb-638fabcc1e4d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Checkpoint_VPNCommunities_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":12,\"w\":6,\"h\":3,\"i\":\"1\"},\"id\":\"7d8c4c70-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":6,\"y\":9,\"w\":6,\"h\":3,\"i\":\"2\"},\"id\":\"399501b0-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":6,\"y\":3,\"w\":6,\"h\":3,\"i\":\"3\"},\"id\":\"05956440-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":9,\"w\":6,\"h\":3,\"i\":\"7\"},\"id\":\"992b2e20-9212-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":0,\"y\":3,\"w\":6,\"h\":3,\"i\":\"8\"},\"id\":\"4d592050-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":6,\"y\":6,\"w\":6,\"h\":3,\"i\":\"9\"},\"id\":\"892e53e0-9216-11e7-8c4e-ddc3f34698b7\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":0,\"y\":0,\"w\":6,\"h\":3,\"i\":\"12\"},\"id\":\"61381490-9471-11e7-97fb-638fabcc1e4d\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":6,\"y\":0,\"w\":6,\"h\":3,\"i\":\"13\"},\"id\":\"1887e690-947a-11e7-be15-07c643dea504\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":0,\"y\":6,\"w\":6,\"h\":3,\"i\":\"14\"},\"id\":\"fb83ea80-3efb-11e8-82c2-3d7da031f151\",\"type\":\"visualization\",\"version\":\"6.2.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+      }
+    }
+  },
+  {
+    "_id": "573b6140-9214-11e7-8c4e-ddc3f34698b7",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Checkpoint_Traffic_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":3,\"i\":\"1\",\"w\":6,\"x\":0,\"y\":6},\"id\":\"7d8c4c70-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"2\",\"w\":6,\"x\":6,\"y\":6},\"id\":\"399501b0-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"3\",\"w\":6,\"x\":6,\"y\":0},\"id\":\"05956440-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"4\",\"w\":6,\"x\":0,\"y\":12},\"id\":\"f1f6d990-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"5\",\"w\":6,\"x\":6,\"y\":12},\"id\":\"fc2b2790-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"6\",\"w\":6,\"x\":0,\"y\":9},\"id\":\"c4ffe220-9212-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"7\",\"w\":6,\"x\":0,\"y\":3},\"id\":\"992b2e20-9212-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"8\",\"w\":6,\"x\":0,\"y\":0},\"id\":\"4d592050-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"9\",\"w\":6,\"x\":6,\"y\":3},\"id\":\"892e53e0-9216-11e7-8c4e-ddc3f34698b7\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"10\",\"w\":6,\"x\":6,\"y\":9},\"id\":\"08102b70-9217-11e7-8c4e-ddc3f34698b7\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"11\",\"w\":6,\"x\":0,\"y\":15},\"id\":\"35f0d080-9221-11e7-8c4e-ddc3f34698b7\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.2.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+      }
+    }
+  },
+  {
+    "_id": "AWAnBksQwICFUdVKZL_z",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Squid_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":4,\"y\":3,\"w\":4,\"h\":4,\"i\":\"1\"},\"id\":\"AWAnAHkHwICFUdVKWPOe\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":4,\"y\":7,\"w\":4,\"h\":4,\"i\":\"2\"},\"id\":\"AWAnAS4TwICFUdVKWmhZ\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":7,\"w\":4,\"h\":4,\"i\":\"3\"},\"id\":\"AWAnAmeZwICFUdVKXONB\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":8,\"y\":7,\"w\":4,\"h\":4,\"i\":\"4\"},\"id\":\"AWAnAYxWwICFUdVKWx8-\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":11,\"w\":12,\"h\":3,\"i\":\"5\"},\"id\":\"AWAnBE47wICFUdVKYMbg\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":3,\"w\":4,\"h\":4,\"i\":\"6\"},\"id\":\"AWAnB21qwICFUdVKZugH\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":8,\"y\":3,\"w\":4,\"h\":4,\"i\":\"7\"},\"id\":\"AWAnBxx3wICFUdVKZkSO\",\"type\":\"visualization\",\"version\":\"6.2.4\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":3,\"i\":\"9\"},\"version\":\"6.2.4\",\"type\":\"visualization\",\"id\":\"4b9eefa0-6fae-11e8-b2a8-bde548a1fb26\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "30 seconds",
+        "pause": false,
+        "section": 1,
+        "value": 30000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"match_all\":{}}}}"
+      }
+    }
+  },
+  {
+    "_id": "BlueCoat_Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BlueCoat_Office365_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":3,\"i\":\"4\",\"w\":4,\"x\":8,\"y\":7},\"id\":\"BlueCoat_HTTP_Action_Top15\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":4,\"x\":8,\"y\":13},\"id\":\"Bluecoat_HTTP_Destination_Hosts_Top15\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":4,\"x\":0,\"y\":13},\"id\":\"Bluecoat_HTTP_UserAgent_Top15\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":4,\"x\":4,\"y\":13},\"id\":\"Bluecoat_UserRequests_Top15\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":4,\"i\":\"8\",\"w\":4,\"x\":4,\"y\":3},\"id\":\"Bluecoat_HTTP_ContentType_Top15\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":4,\"i\":\"9\",\"w\":4,\"x\":0,\"y\":3},\"id\":\"Bluecoat_HTTP_Category_Count_Top15\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"11\",\"w\":4,\"x\":0,\"y\":18},\"id\":\"Bluecoat_UserAgentOS_Top10\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":4,\"x\":8,\"y\":3},\"id\":\"Bluecoat_Users_SumOfBytes_Top15\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"15\",\"w\":4,\"x\":4,\"y\":7},\"id\":\"Bluecoat_SC-Filter-Result_Top15\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"18\",\"w\":6,\"x\":6,\"y\":10},\"id\":\"5a510e70-1aaf-11e7-8702-bf6a2f002df4\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"19\",\"w\":6,\"x\":0,\"y\":10},\"id\":\"81118ab0-1ab6-11e7-8702-bf6a2f002df4\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"spy\":null},\"gridData\":{\"h\":3,\"i\":\"20\",\"w\":4,\"x\":0,\"y\":0},\"id\":\"67696550-1b7a-11e7-b828-b1077ad4a591\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"21\",\"w\":8,\"x\":4,\"y\":0},\"id\":\"2bf2cae0-566f-11e7-8f65-45fe29c2a79e\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"22\",\"w\":4,\"x\":0,\"y\":7},\"id\":\"d9bf2040-3565-11e7-adcc-b9caa1d92bc1\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.2.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*.office365.com OR *.microsoftonline.com OR *.office.com OR *.live.com OR *.windows.net OR *.office.net OR *.skypeforbusiness.com OR *.skype.com OR *.lync.com\"}}"
+      }
+    }
+  },
+  {
+    "_id": "deaa9d70-2086-11e8-82c2-3d7da031f151",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BlueCoat_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"4\",\"gridData\":{\"x\":24,\"y\":71,\"w\":24,\"h\":12,\"i\":\"4\"},\"id\":\"BlueCoat_HTTP_Action_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":32,\"y\":51,\"w\":16,\"h\":20,\"i\":\"5\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"Bluecoat_HTTP_Destination_Hosts_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":51,\"w\":16,\"h\":20,\"i\":\"6\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"Bluecoat_HTTP_UserAgent_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":16,\"y\":51,\"w\":16,\"h\":20,\"i\":\"7\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"Bluecoat_UserRequests_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":16,\"y\":11,\"w\":16,\"h\":16,\"i\":\"8\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"Bluecoat_HTTP_ContentType_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":11,\"w\":16,\"h\":16,\"i\":\"9\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"Bluecoat_HTTP_Category_Count_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":71,\"w\":24,\"h\":12,\"i\":\"11\"},\"id\":\"Bluecoat_UserAgentOS_Top10\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":32,\"y\":11,\"w\":16,\"h\":16,\"i\":\"14\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"Bluecoat_Users_SumOfBytes_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":16,\"y\":27,\"w\":16,\"h\":12,\"i\":\"15\"},\"id\":\"Bluecoat_SC-Filter-Result_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":24,\"y\":39,\"w\":24,\"h\":12,\"i\":\"18\"},\"id\":\"5a510e70-1aaf-11e7-8702-bf6a2f002df4\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":0,\"y\":39,\"w\":24,\"h\":12,\"i\":\"19\"},\"id\":\"81118ab0-1ab6-11e7-8702-bf6a2f002df4\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"20\",\"gridData\":{\"x\":0,\"y\":0,\"w\":11,\"h\":11,\"i\":\"20\"},\"embeddableConfig\":{\"spy\":null},\"id\":\"67696550-1b7a-11e7-b828-b1077ad4a591\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"21\",\"gridData\":{\"x\":11,\"y\":0,\"w\":27,\"h\":11,\"i\":\"21\"},\"id\":\"2bf2cae0-566f-11e7-8f65-45fe29c2a79e\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"22\",\"gridData\":{\"x\":0,\"y\":27,\"w\":16,\"h\":12,\"i\":\"22\"},\"id\":\"d9bf2040-3565-11e7-adcc-b9caa1d92bc1\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"23\",\"gridData\":{\"x\":32,\"y\":27,\"w\":16,\"h\":12,\"i\":\"23\"},\"id\":\"49a87830-7e93-11e8-b2a8-bde548a1fb26\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"24\",\"gridData\":{\"x\":38,\"y\":0,\"w\":10,\"h\":11,\"i\":\"24\"},\"embeddableConfig\":{},\"id\":\"f220e7c0-ac3f-11e8-aea1-7d38ef13f830\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"}}"
+      }
+    }
+  },
+  {
+    "_id": "f808a120-478f-11e7-81a9-872103d55812",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Pravail_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":20,\"i\":\"1\",\"w\":24,\"x\":0,\"y\":20},\"id\":\"e5eef3a0-478e-11e7-81a9-872103d55812\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":20,\"i\":\"2\",\"w\":24,\"x\":24,\"y\":20},\"id\":\"cd839ea0-478f-11e7-81a9-872103d55812\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":20,\"i\":\"4\",\"w\":24,\"x\":24,\"y\":0},\"id\":\"86dec010-478f-11e7-81a9-872103d55812\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":20,\"i\":\"5\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"8fbe5e10-4790-11e7-81a9-872103d55812\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+      }
+    }
+  },
+  {
+    "_id": "3d6a5ef0-2e9b-11e8-82c2-3d7da031f151",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Panda_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":12,\"i\":\"1\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"0ee9e020-2e80-11e8-82c2-3d7da031f151\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"2\",\"w\":24,\"x\":24,\"y\":0},\"id\":\"9e699240-2e8f-11e8-82c2-3d7da031f151\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"3\",\"w\":24,\"x\":0,\"y\":12},\"id\":\"81a442e0-2e99-11e8-82c2-3d7da031f151\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"4\",\"w\":24,\"x\":24,\"y\":12},\"id\":\"fa054860-2cf5-11e8-82c2-3d7da031f151\",\"panelIndex\":\"4\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "857150a0-fdea-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Application Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"title\":\"Traffic by Application\",\"panelIndex\":\"1\",\"gridData\":{\"x\":3,\"y\":0,\"w\":9,\"h\":3,\"i\":\"1\"},\"id\":\"4f8f21e0-fd79-11e7-be83-eddfa25a06ba\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"title\":\"Traffic by Application\",\"panelIndex\":\"2\",\"gridData\":{\"x\":9,\"y\":3,\"w\":3,\"h\":3,\"i\":\"2\"},\"id\":\"0adfdc50-fd7a-11e7-be83-eddfa25a06ba\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"title\":\"Top 10 Applications\",\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":3,\"w\":6,\"h\":6,\"i\":\"3\"},\"id\":\"a83b53e0-fd79-11e7-be83-eddfa25a06ba\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"title\":\"Unusual Applications\",\"panelIndex\":\"4\",\"gridData\":{\"x\":6,\"y\":3,\"w\":3,\"h\":3,\"i\":\"4\"},\"id\":\"Top-10-Applications-(Sum-of-Bytes-Transferred)\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"title\":\"Total Traffic\",\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":0,\"w\":3,\"h\":3,\"i\":\"5\"},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"type\":\"visualization\",\"version\":\"6.1.2\"},{\"title\":\"Applications by Protocol\",\"panelIndex\":\"6\",\"gridData\":{\"x\":6,\"y\":6,\"w\":3,\"h\":3,\"i\":\"6\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"a58750a0-fdeb-11e7-be83-eddfa25a06ba\"},{\"title\":\"Traffic by PANW Rule\",\"panelIndex\":\"7\",\"gridData\":{\"x\":9,\"y\":6,\"w\":3,\"h\":3,\"i\":\"7\"},\"version\":\"6.1.2\",\"type\":\"visualization\",\"id\":\"bc35e500-fdeb-11e7-be83-eddfa25a06ba\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "uiStateJSON": "{\"P-3\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "ddfa5fb0-fde9-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto URL Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"3\",\"gridData\":{\"x\":12,\"y\":15,\"w\":12,\"h\":15,\"i\":\"3\"},\"id\":\"3f587050-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by Destination\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":24,\"y\":15,\"w\":12,\"h\":15,\"i\":\"4\"},\"id\":\"e43b6ff0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":15,\"w\":12,\"h\":15,\"i\":\"5\"},\"id\":\"6fee55e0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"title\":\"URL Count by Source IP\",\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"6\"},\"id\":\"ecb58ad0-fde8-11e7-be83-eddfa25a06ba\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":55,\"w\":12,\"h\":15,\"i\":\"7\"},\"id\":\"22307310-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":12,\"y\":55,\"w\":12,\"h\":15,\"i\":\"8\"},\"id\":\"77480ca0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":55,\"w\":24,\"h\":15,\"i\":\"9\"},\"id\":\"f679d8f0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":36,\"y\":15,\"w\":12,\"h\":15,\"i\":\"10\"},\"id\":\"6d55ff20-fde5-11e7-be83-eddfa25a06ba\",\"title\":\"Top 10 URLs\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":30,\"w\":48,\"h\":25,\"i\":\"11\"},\"id\":\"37ee9780-fde9-11e7-be83-eddfa25a06ba\",\"title\":\"Top 10 Destinations\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"14\"},\"version\":\"6.3.2\",\"type\":\"visualization\",\"id\":\"201ac220-b827-11e8-827b-5db3eadf5be6\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "7ef5f150-fdfd-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Overview Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":12,\"y\":0,\"w\":12,\"h\":13,\"i\":\"1\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"4f8f21e0-fd79-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":24,\"y\":0,\"w\":12,\"h\":13,\"i\":\"2\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"c5a60560-fdfb-11e7-be83-eddfa25a06ba\",\"title\":\"URLs by Action\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":36,\"y\":0,\"w\":12,\"h\":13,\"i\":\"3\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"15f85080-fdc1-11e7-be83-eddfa25a06ba\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":13,\"i\":\"4\"},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"title\":\"Total Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":28,\"w\":12,\"h\":15,\"i\":\"9\"},\"id\":\"22307310-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URL Count\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":12,\"y\":28,\"w\":12,\"h\":15,\"i\":\"10\"},\"id\":\"31b28690-fdb9-11e7-be83-eddfa25a06ba\",\"title\":\"System Events - Severity Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":36,\"y\":28,\"w\":12,\"h\":15,\"i\":\"12\"},\"id\":\"feb4b0d0-fdfc-11e7-be83-eddfa25a06ba\",\"title\":\"Threat Events - Severity Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":28,\"w\":12,\"h\":15,\"i\":\"13\"},\"id\":\"253d5860-fdfd-11e7-be83-eddfa25a06ba\",\"title\":\"Config Changes\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":36,\"y\":13,\"w\":12,\"h\":15,\"i\":\"14\"},\"id\":\"51481b10-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":12,\"y\":13,\"w\":12,\"h\":15,\"i\":\"15\"},\"id\":\"45646f60-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":0,\"y\":13,\"w\":12,\"h\":15,\"i\":\"16\"},\"id\":\"49987c20-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Source IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":24,\"y\":13,\"w\":12,\"h\":15,\"i\":\"17\"},\"id\":\"4d93ecb0-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "f0dbab20-fdb7-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto System Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":16,\"x\":32,\"y\":15},\"id\":\"81c213d0-fdb4-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"System Logs by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":32,\"x\":0,\"y\":15},\"id\":\"4a9886a0-fdb4-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"System Logs by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":40,\"x\":8,\"y\":0},\"id\":\"52de9c60-fdb8-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Log Entries by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"8\",\"w\":8,\"x\":0,\"y\":0},\"id\":\"31b28690-fdb9-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"8\",\"title\":\"Warnings & Errors\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"9\",\"w\":48,\"x\":0,\"y\":30},\"id\":\"456f93d0-ff7b-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"9\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "1ffc31f0-fdbc-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Config Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":16,\"x\":32,\"y\":0},\"id\":\"7f3d2bc0-fdb6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"2\",\"title\":\"Config Logs by Command\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":32,\"x\":0,\"y\":0},\"id\":\"9d677dd0-fdb6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Config Logs by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":12,\"x\":0,\"y\":30},\"id\":\"532947b0-fdbd-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Config Changes by Panorama\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":15},\"id\":\"fb3d3160-fdbc-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"Config Changes by Users\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"6\",\"w\":36,\"x\":12,\"y\":15},\"id\":\"ee17eac0-ff79-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"6\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "558b4650-8050-11e8-b2a8-bde548a1fb26",
+    "_type": "dashboard",
+    "_source": {
+      "title": "OLDPaloAlto_Office365_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"6\",\"gridData\":{\"x\":24,\"y\":8,\"w\":24,\"h\":12,\"i\":\"6\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"id\":\"Traffic_SumBytes\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":12,\"y\":20,\"w\":12,\"h\":12,\"i\":\"8\"},\"id\":\"PaloAlto_TopActions\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":44,\"w\":12,\"h\":16,\"i\":\"9\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"d4a7d0a0-0a3d-11e7-bc2e-2d1fa5839169\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":12,\"y\":44,\"w\":12,\"h\":16,\"i\":\"10\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"66965290-1392-11e7-a7d7-41b683750b4a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":24,\"y\":20,\"w\":24,\"h\":12,\"i\":\"11\"},\"id\":\"87a5e2e0-1395-11e7-a7d7-41b683750b4a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":20,\"w\":12,\"h\":12,\"i\":\"13\"},\"id\":\"037b6f60-1397-11e7-a7d7-41b683750b4a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":36,\"y\":44,\"w\":12,\"h\":16,\"i\":\"15\"},\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"19f70410-1901-11e7-a8ba-91c203961f0b\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":0,\"y\":32,\"w\":24,\"h\":12,\"i\":\"18\"},\"id\":\"ef25cb70-1b73-11e7-a59e-25ff89013d59\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":8,\"i\":\"19\"},\"id\":\"d712da30-1b75-11e7-a59e-25ff89013d59\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"20\",\"gridData\":{\"x\":24,\"y\":44,\"w\":12,\"h\":16,\"i\":\"20\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":2,\"direction\":\"desc\"}}}},\"id\":\"2325ef00-4c51-11e7-9f6e-6fb2b2fe33c7\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"21\",\"gridData\":{\"x\":0,\"y\":60,\"w\":24,\"h\":16,\"i\":\"21\"},\"embeddableConfig\":{\"mapCenter\":[23.885837699862005,21.4453125],\"mapZoom\":1},\"id\":\"fba92fb0-5280-11e7-b7c3-2f79f4c3ae70\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"22\",\"gridData\":{\"x\":24,\"y\":60,\"w\":24,\"h\":16,\"i\":\"22\"},\"embeddableConfig\":{\"mapCenter\":[37.71859032558816,1.0546875000000002],\"mapZoom\":1},\"id\":\"0d8e5520-5281-11e7-b7c3-2f79f4c3ae70\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"23\",\"gridData\":{\"x\":24,\"y\":32,\"w\":24,\"h\":12,\"i\":\"23\"},\"id\":\"0eee28b0-5762-11e7-adb4-91faadce0a80\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"24\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":8,\"i\":\"24\"},\"id\":\"2c557f00-5a7a-11e7-af59-7b76acf16b9a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"27\",\"gridData\":{\"x\":0,\"y\":8,\"w\":24,\"h\":12,\"i\":\"27\"},\"id\":\"11a5c390-5b10-11e7-8e2b-eb47e6b96b2f\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"28\",\"gridData\":{\"x\":12,\"y\":0,\"w\":12,\"h\":8,\"i\":\"28\"},\"embeddableConfig\":{\"spy\":null},\"id\":\"c6bb7a80-5b0c-11e7-8e2b-eb47e6b96b2f\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "10 seconds",
+        "pause": true,
+        "section": 1,
+        "value": 10000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"type\":\"phrases\",\"key\":\"SourceAddress.keyword\",\"value\":\"172.22.96.143, 172.22.96.144\",\"params\":[\"172.22.96.143\",\"172.22.96.144\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"SourceAddress.keyword\":\"172.22.96.143\"}},{\"match_phrase\":{\"SourceAddress.keyword\":\"172.22.96.144\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"type\":\"phrases\",\"key\":\"Application\",\"value\":\"ms_office365_base, windows_azure_base, outlook_web_online, windows_push_notifications, sharepoint_online, ms_onedrive_base, ms_update, ms_lync_online, ms_teams\",\"params\":[\"ms_office365_base\",\"windows_azure_base\",\"outlook_web_online\",\"windows_push_notifications\",\"sharepoint_online\",\"ms_onedrive_base\",\"ms_update\",\"ms_lync_online\",\"ms_teams\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"Application\":\"ms_office365_base\"}},{\"match_phrase\":{\"Application\":\"windows_azure_base\"}},{\"match_phrase\":{\"Application\":\"outlook_web_online\"}},{\"match_phrase\":{\"Application\":\"windows_push_notifications\"}},{\"match_phrase\":{\"Application\":\"sharepoint_online\"}},{\"match_phrase\":{\"Application\":\"ms_onedrive_base\"}},{\"match_phrase\":{\"Application\":\"ms_update\"}},{\"match_phrase\":{\"Application\":\"ms_lync_online\"}},{\"match_phrase\":{\"Application\":\"ms_teams\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"}}"
+      }
+    }
+  },
+  {
+    "_id": "PaloAlto_Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "OLDPaloAlto_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"6\",\"gridData\":{\"x\":24,\"y\":8,\"w\":24,\"h\":12,\"i\":\"6\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"id\":\"Traffic_SumBytes\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":12,\"y\":20,\"w\":12,\"h\":12,\"i\":\"8\"},\"id\":\"PaloAlto_TopActions\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":44,\"w\":12,\"h\":16,\"i\":\"9\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"d4a7d0a0-0a3d-11e7-bc2e-2d1fa5839169\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":12,\"y\":44,\"w\":12,\"h\":16,\"i\":\"10\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"66965290-1392-11e7-a7d7-41b683750b4a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":24,\"y\":20,\"w\":24,\"h\":12,\"i\":\"11\"},\"id\":\"87a5e2e0-1395-11e7-a7d7-41b683750b4a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":20,\"w\":12,\"h\":12,\"i\":\"13\"},\"id\":\"037b6f60-1397-11e7-a7d7-41b683750b4a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":36,\"y\":44,\"w\":12,\"h\":16,\"i\":\"15\"},\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}},\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"19f70410-1901-11e7-a8ba-91c203961f0b\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":0,\"y\":32,\"w\":24,\"h\":12,\"i\":\"18\"},\"id\":\"ef25cb70-1b73-11e7-a59e-25ff89013d59\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":0,\"y\":0,\"w\":8,\"h\":8,\"i\":\"19\"},\"id\":\"d712da30-1b75-11e7-a59e-25ff89013d59\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"20\",\"gridData\":{\"x\":24,\"y\":44,\"w\":12,\"h\":16,\"i\":\"20\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":2,\"direction\":\"desc\"}}}},\"id\":\"2325ef00-4c51-11e7-9f6e-6fb2b2fe33c7\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"21\",\"gridData\":{\"x\":0,\"y\":60,\"w\":24,\"h\":16,\"i\":\"21\"},\"embeddableConfig\":{\"mapCenter\":[23.885837699862005,21.4453125],\"mapZoom\":1},\"id\":\"fba92fb0-5280-11e7-b7c3-2f79f4c3ae70\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"22\",\"gridData\":{\"x\":24,\"y\":60,\"w\":24,\"h\":16,\"i\":\"22\"},\"embeddableConfig\":{\"mapCenter\":[37.71859032558816,1.0546875000000002],\"mapZoom\":1},\"id\":\"0d8e5520-5281-11e7-b7c3-2f79f4c3ae70\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"23\",\"gridData\":{\"x\":24,\"y\":32,\"w\":24,\"h\":12,\"i\":\"23\"},\"id\":\"0eee28b0-5762-11e7-adb4-91faadce0a80\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"24\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":8,\"i\":\"24\"},\"id\":\"2c557f00-5a7a-11e7-af59-7b76acf16b9a\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"27\",\"gridData\":{\"x\":0,\"y\":8,\"w\":24,\"h\":12,\"i\":\"27\"},\"id\":\"11a5c390-5b10-11e7-8e2b-eb47e6b96b2f\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"28\",\"gridData\":{\"x\":8,\"y\":0,\"w\":8,\"h\":8,\"i\":\"28\"},\"embeddableConfig\":{\"spy\":null},\"id\":\"c6bb7a80-5b0c-11e7-8e2b-eb47e6b96b2f\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"29\",\"gridData\":{\"x\":16,\"y\":0,\"w\":8,\"h\":8,\"i\":\"29\"},\"version\":\"6.3.2\",\"type\":\"visualization\",\"id\":\"b13166e0-834f-11e8-b2a8-bde548a1fb26\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"}}"
+      }
+    }
+  },
+  {
+    "_id": "Traffic-Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Traffic Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"5\",\"gridData\":{\"x\":24,\"y\":30,\"w\":24,\"h\":27,\"i\":\"5\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"Top-10-Source-Users-slash-IP's-ampersand-Applications-(Sum-of-Bytes-Transferred)\",\"title\":\"Source User & IP by Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":0,\"y\":0,\"w\":9,\"h\":15,\"i\":\"9\"},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"title\":\"Network Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":16,\"y\":0,\"w\":32,\"h\":15,\"i\":\"13\"},\"embeddableConfig\":{\"vis\":{\"colors\":{\"L3-Trust\":\"#508642\",\"L3-Untrust\":\"#5195CE\",\"VPN-Sites\":\"#E5AC0E\",\"WiFi-Staff\":\"#BA43A9\"}}},\"id\":\"2e8b7470-fda2-11e7-be83-eddfa25a06ba\",\"title\":\"Network Traffic by Zone\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":12,\"y\":15,\"w\":12,\"h\":15,\"i\":\"15\"},\"id\":\"c3f37800-fd7a-11e7-be83-eddfa25a06ba\",\"title\":\"URL Categories by Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":0,\"y\":15,\"w\":12,\"h\":15,\"i\":\"16\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"id\":\"0adfdc50-fd7a-11e7-be83-eddfa25a06ba\",\"title\":\"Applications by Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":36,\"y\":15,\"w\":12,\"h\":15,\"i\":\"17\"},\"id\":\"448816c0-fdca-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic Destination IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"18\",\"gridData\":{\"x\":24,\"y\":15,\"w\":12,\"h\":15,\"i\":\"18\"},\"id\":\"34e58e50-fdca-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic Source IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"19\",\"gridData\":{\"x\":9,\"y\":0,\"w\":7,\"h\":15,\"i\":\"19\"},\"embeddableConfig\":{},\"id\":\"e5e68110-ba57-11e8-827b-5db3eadf5be6\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"20\",\"gridData\":{\"x\":0,\"y\":30,\"w\":24,\"h\":27,\"i\":\"20\"},\"version\":\"6.3.2\",\"type\":\"visualization\",\"id\":\"41262f30-ba58-11e8-827b-5db3eadf5be6\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-30m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+      }
+    }
+  },
+  {
+    "_id": "AV6f1xiVRQz7pa3DYBqP",
+    "_type": "dashboard",
+    "_source": {
+      "title": "OLDPaloAlto-URL Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":24,\"y\":14,\"w\":11,\"h\":14,\"i\":\"1\"},\"id\":\"AV6f04RqRQz7pa3DXA-6\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":12,\"y\":14,\"w\":12,\"h\":14,\"i\":\"2\"},\"id\":\"AV6f0_LpRQz7pa3DXI-f\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":16,\"y\":28,\"w\":16,\"h\":13,\"i\":\"3\"},\"id\":\"AV6f0yNYRQz7pa3DW501\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":28,\"w\":16,\"h\":13,\"i\":\"4\"},\"id\":\"AV6f0tPJRQz7pa3DW0Tk\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":32,\"y\":28,\"w\":16,\"h\":13,\"i\":\"5\"},\"id\":\"AV6f1Zg6RQz7pa3DXlgU\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":0,\"w\":34,\"h\":14,\"i\":\"6\"},\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"id\":\"AV6f2OpRRQz7pa3DYjry\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":35,\"y\":14,\"w\":13,\"h\":14,\"i\":\"7\"},\"id\":\"AV6f2dhIRQz7pa3DY0LI\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":0,\"y\":14,\"w\":12,\"h\":14,\"i\":\"8\"},\"id\":\"AV6f2hT4RQz7pa3DY4d5\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":34,\"y\":0,\"w\":14,\"h\":14,\"i\":\"9\"},\"embeddableConfig\":{},\"id\":\"6b71ba20-b742-11e8-827b-5db3eadf5be6\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"match_all\":{}}}}"
+      }
+    }
+  },
+  {
+    "_id": "5c628850-fdc7-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Threat Dashboard : Warning+",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":12,\"x\":24,\"y\":0},\"id\":\"a14efdf0-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Threats by Destination - Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":24,\"y\":15},\"id\":\"ef9f83d0-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Threats by Severity - Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":12,\"x\":36,\"y\":0},\"id\":\"b32185c0-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"Threats by Source - Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":24,\"x\":0,\"y\":15},\"id\":\"daaaad60-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"Threats by Type - Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"3ef8c0c0-fdbf-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":20,\"i\":\"8\",\"w\":48,\"x\":0,\"y\":30},\"id\":\"67d21be0-ff7c-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"8\",\"title\":\"Threat Logs - Warning+\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "12342720-fdc2-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Threat Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":24,\"x\":24,\"y\":15},\"id\":\"15f85080-fdc1-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":0,\"y\":15},\"id\":\"bd2d2f60-fdc1-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Threats by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"3ef8c0c0-fdbf-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":12,\"x\":24,\"y\":0},\"id\":\"7730faa0-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Threats by Destination\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"8\",\"w\":12,\"x\":36,\"y\":0},\"id\":\"c1060a80-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"8\",\"title\":\"Threats by Source\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"10\",\"w\":48,\"x\":0,\"y\":30},\"id\":\"f71e5530-ff7b-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"10\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  },
+  {
+    "_id": "730758e0-fdec-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Blocked URL Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"1\",\"w\":12,\"x\":36,\"y\":0},\"id\":\"d1d807e0-fdea-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"1\",\"title\":\"Blocked Applications by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":12,\"x\":24,\"y\":0},\"id\":\"22307310-fde8-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"2\",\"title\":\"Blocked URLs\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":12,\"x\":12,\"y\":0},\"id\":\"516a2400-fde8-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":20,\"x\":0,\"y\":15},\"id\":\"0f6f01f0-fde9-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Blocked URLs by Source IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":0},\"id\":\"77480ca0-fde8-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"Blocked URLs by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":20,\"x\":0,\"y\":30},\"id\":\"f679d8f0-fde8-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"Blocked URLs by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":20,\"x\":0,\"y\":45},\"id\":\"40a28710-fde9-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Blocked URLs by Destination\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":45,\"i\":\"9\",\"w\":28,\"x\":20,\"y\":15},\"id\":\"95d11900-ff73-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"9\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    }
+  }
+]
