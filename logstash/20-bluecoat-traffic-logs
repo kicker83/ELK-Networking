@@ -1,0 +1,41 @@
+filter {
+  if [type] == "bluecoat" {
+                if ([message] =~ /^#/) {
+                  drop{}
+                }
+    csv {
+        columns => ["date", "time", "time-taken", "c-ip", "sc-status", "s-action", "sc-bytes", "cs-bytes", "cs-method", "cs-uri-scheme", "cs-host", "cs-uri-stem", "csusername", "s-supplier-name", "rs(Content-Type)", "cs(User-Agent)", "sc-filter-result", "sc-filter-category","x-virus-id", "s-ip"]
+        separator => " "
+    }
+    if [date] and [time] {
+        mutate { 
+                merge => ["date", "time"] 
+        }   # merge and join need to be in 2 separate mutates
+        mutate { 
+                join => ["date", " "] 
+        }       # merge and join need to be in 2 separate mutates
+        date { 
+                match => ["date", "YYYY-MM-dd HH:mm:ss" ] 
+                timezone => "UTC"
+        } 
+    }
+
+    if ([s-supplier-ip] and [s-supplier-ip] != "-") { 
+        geoip {
+            source => "s-supplier-ip"
+        }
+    }
+    mutate {
+        convert => ["sc-bytes", "integer",
+        "time-taken", "integer",
+        "cs-bytes", "integer",
+        "duration", "integer"]
+    }
+    if [cs(User-Agent)] != "" {
+        useragent { source => "cs(User-Agent)" prefix => "user_agent." }
+    }
+    mutate {
+        remove_field => ["message", "host", "date", "time", "gmttime", "localtime", "raw_message"]
+    }
+  }#endif
+}
