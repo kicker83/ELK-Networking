@@ -1,10 +1,7 @@
-{
-  "panos-threat": {
-    "order": 0,
-    "version": 1,
-    "index_patterns": [
-      "panos-threat*"
-    ],
+### TEMPLATE PANOS-CRTM-threat
+PUT /_template/panos-crtm-threat
+{ 
+	"index_patterns": ["panos-crtm-threat-*"],
     "settings": {
       "index": {
         "number_of_shards": "3",
@@ -743,5 +740,4 @@
       }
     },
     "aliases": {}
-  }
 }
