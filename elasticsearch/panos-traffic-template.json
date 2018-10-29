@@ -1,10 +1,7 @@
-{
-  "panos-traffic": {
-    "order": 0,
-    "version": 1,
-    "index_patterns": [
-      "panos-traffic*"
-    ],
+### TEMPLATE PANOS-CRTM-traffic
+PUT /_template/panos-crtm-traffic
+{  
+	"index_patterns": ["panos-crtm-traffic-*"],
     "settings": {
       "index": {
         "number_of_shards": "3",
@@ -617,5 +614,4 @@
       }
     },
     "aliases": {}
-  }
 }
