@@ -358,7 +358,7 @@ PUT /_template/panos-crtm-threat
             }
           },
           "PCAP_ID": {
-            "type": "integer"
+            "type": "long"
           },
           "ParentSessionID": {
             "type": "integer"
