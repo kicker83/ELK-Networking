@@ -25,86 +25,9 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"cs-uri-stem\",\"value\":\"PSUAResources2.zip\",\"params\":{\"query\":\"PSUAResources2.zip\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"PSUAResources2.zip\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"key\":\"cs-uri-stem\",\"negate\":false,\"params\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\"},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"}}}}]}"
       }
-    }
-  },
-  {
-    "_id": "cb7fbeb0-1e6f-11e8-8587-c15f47339c30",
-    "_type": "search",
-    "_source": {
-      "title": "Bluecoat-NewMinersAge",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "c-ip",
-        "csusername",
-        "cs-method",
-        "cs-uri-scheme",
-        "cs-uri-stem",
-        "sc-filter-result",
-        "cs(User-Agent)"
-      ],
-      "sort": [
-        "realdate",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*newminersage*\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "5e34b4e0-21e5-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "bluecoat_discover_unavailable",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "c-ip",
-        "csusername",
-        "cs-uri-stem",
-        "cs-method",
-        "cs-host",
-        "sc-filter-category",
-        "s-action",
-        "cs(User-Agent)"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"sc-filter-category\",\"value\":\"unavailable\",\"params\":{\"query\":\"unavailable\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"sc-filter-category\":{\"query\":\"unavailable\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
-      }
-    }
-  },
-  {
-    "_id": "43e652a0-2123-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "bluecoat_discover",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "c-ip",
-        "csusername",
-        "cs-uri-stem",
-        "cs-method",
-        "cs-host",
-        "sc-filter-category",
-        "s-action",
-        "cs(User-Agent)"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
-      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   },
   {
@@ -133,6 +56,32 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"key\":\"cs-uri-stem\",\"negate\":false,\"params\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\"},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"http://acs.pandasoftware.com/member/installers/default/WAC/770000004/\",\"type\":\"phrase\"}}}}]}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c138b930-bcb6-11e8-8235-395bd745faac",
+    "_type": "search",
+    "_source": {
+      "title": "Query_Wildcard",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"query\":\"authrootstl*\",\"analyze_wildcard\":true}}]}},\"meta\":{\"negate\":true,\"index\":\"bluecoat-logs\",\"disabled\":false,\"alias\":null,\"type\":\"custom\",\"key\":\"query\",\"value\":\"{\\\"bool\\\":{\\\"must\\\":[{\\\"query_string\\\":{\\\"query\\\":\\\"authrootstl*\\\",\\\"analyze_wildcard\\\":true}}]}}\"},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   },
   {
@@ -161,406 +110,55 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"ee17cd90-2050-11e8-8587-c15f47339c30\",\"key\":\"cs-uri-stem\",\"negate\":false,\"params\":{\"query\":\"enterprise.updates.pandasoftware.com/pcop/files/\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"enterprise.updates.pandasoftware.com/pcop/files/\"},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"enterprise.updates.pandasoftware.com/pcop/files/\",\"type\":\"phrase\"}}}}]}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   },
   {
-    "_id": "aa055240-2388-11e8-82c2-3d7da031f151",
+    "_id": "Metricbeat-Docker",
     "_type": "search",
     "_source": {
-      "title": "bluecoat_ctmail",
+      "columns": [
+        "_source"
+      ],
       "description": "",
       "hits": 0,
-      "columns": [
-        "c-ip",
-        "csusername",
-        "cs-uri-stem",
-        "cs-method",
-        "cs-host",
-        "sc-filter-category",
-        "s-action"
-      ],
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"metricset.module:docker\"}}, \"index\": \"metricbeat-*\"}"
+      },
       "sort": [
         "@timestamp",
         "desc"
       ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*.ctmail.com\"},\"filter\":[]}"
-      }
+      "title": "Metricbeat Docker",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   },
   {
-    "_id": "c0330060-2123-11e8-82c2-3d7da031f151",
+    "_id": "Apache-HTTPD",
     "_type": "search",
     "_source": {
-      "title": "pan-traffic_discover",
+      "columns": [
+        "_source"
+      ],
       "description": "",
       "hits": 0,
-      "columns": [
-        "SourceAddress",
-        "SourceUser",
-        "DestinationAddress",
-        "DestinationPort",
-        "IPProtocol",
-        "Application",
-        "Rule",
-        "Action"
-      ],
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"metricset.module: apache\"}}, \"index\": \"metricbeat-*\"}"
+      },
       "sort": [
         "@timestamp",
         "desc"
       ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "16db2f90-2125-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "squid_discover",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "src_ip",
-        "url_host",
-        "peerhost",
-        "http_method",
-        "url_port",
-        "http_status_code"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "ea0f3fc0-2123-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "pan-url_discover",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "sourceIP",
-        "destinationIP",
-        "URIHost",
-        "category",
-        "action"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"1b6c4c90-5f43-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "d69bbcb0-2124-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "pravail_discover",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "blocked_host",
-        "destination",
-        "dstport",
-        "attack_type",
-        "action",
-        "hostname"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"pravail-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "08dc56f0-2123-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "bcevent_discover",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "clientIP",
-        "code",
-        "hostname",
-        "user",
-        "verdict"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"bcevent\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "7ea7ac90-2123-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "checkpoint_discover",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "src",
-        "dst",
-        "service_id",
-        "outgoing_url",
-        "user",
-        "product_family",
-        "device",
-        "rule",
-        "Action"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"checkpoint-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "ee00bab0-2122-11e8-82c2-3d7da031f151",
-    "_type": "search",
-    "_source": {
-      "title": "pasyslog_discover",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "Description",
-        "Severity",
-        "EventID",
-        "Subtype",
-        "Type",
-        "SerialNum"
-      ],
-      "sort": [
-        "GenerateTime",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"27790410-5f43-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "d4f929a0-6fdb-11e8-b2a8-bde548a1fb26",
-    "_type": "search",
-    "_source": {
-      "title": "pan-traffic_92.63.193.134",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "SourceAddress",
-        "SourceUser",
-        "DestinationAddress",
-        "DestinationPort",
-        "IPProtocol",
-        "Application",
-        "Rule",
-        "Action"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"dd948ae0-5f42-11e8-a735-43b317cab55d\",\"type\":\"phrase\",\"key\":\"SourceAddress\",\"value\":\"92.63.193.134\",\"params\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"SourceAddress\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
-      }
-    }
-  },
-  {
-    "_id": "791e3f30-6fd6-11e8-b2a8-bde548a1fb26",
-    "_type": "search",
-    "_source": {
-      "title": "checkpoint_92.63.193.134",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "src",
-        "dst",
-        "device",
-        "service",
-        "rule",
-        "Action"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"checkpoint-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"checkpoint-logs\",\"key\":\"src\",\"negate\":false,\"params\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"92.63.193.134\"},\"query\":{\"match\":{\"src\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"}}}}]}"
-      }
-    }
-  },
-  {
-    "_id": "66b1c540-72df-11e8-b2a8-bde548a1fb26",
-    "_type": "search",
-    "_source": {
-      "title": "SquidAccess_ICM161_last30",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "src_ip",
-        "url_host",
-        "url_port",
-        "squid_request_status"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"squidaccess-logs\",\"type\":\"phrase\",\"key\":\"src_ip\",\"value\":\"192.168.142.109\",\"params\":{\"query\":\"192.168.142.109\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"src_ip\":{\"query\":\"192.168.142.109\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
-      }
-    }
-  },
-  {
-    "_id": "eb9192f0-7a18-11e8-b2a8-bde548a1fb26",
-    "_type": "search",
-    "_source": {
-      "title": "Bluecoat_adlooxtracker_Requests",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "c-ip",
-        "cs-uri-stem",
-        "s-action",
-        "sc-filter-category"
-      ],
-      "sort": [
-        "realdate",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"bluecoat-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"adlooxtracking.com\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "e61094e0-8a60-11e8-b2a8-bde548a1fb26",
-    "_type": "search",
-    "_source": {
-      "title": "SquidAccess_ICM162_last30",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "src_ip",
-        "url_host",
-        "url_port",
-        "squid_request_status"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"index\":\"squidaccess-logs\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"src_ip\",\"value\":\"192.168.142.110\",\"params\":{\"query\":\"192.168.142.110\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"src_ip\":{\"query\":\"192.168.142.110\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
-      }
-    }
-  },
-  {
-    "_id": "4fca2f40-b72a-11e8-827b-5db3eadf5be6",
-    "_type": "search",
-    "_source": {
-      "title": "Squidaccess_Justicia_503",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "src_ip",
-        "url_host",
-        "url_path",
-        "http_status_code"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"10.80.79.200 OR 10.80.79.81\"},\"filter\":[{\"meta\":{\"index\":\"squidaccess-logs\",\"type\":\"phrase\",\"key\":\"http_status_code.keyword\",\"value\":\"503\",\"params\":{\"query\":\"503\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":false,\"alias\":null},\"query\":{\"match\":{\"http_status_code.keyword\":{\"query\":\"503\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
-      }
-    }
-  },
-  {
-    "_id": "95d11900-ff73-11e7-9ac0-a903174a3c8d",
-    "_type": "search",
-    "_source": {
-      "title": "Blocked URLs",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "Miscellaneous",
-        "Action",
-        "SourceIP",
-        "SourceUser"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"Threat_ContentType:'url' NOT Action:'alert'\"},\"filter\":[]}"
-      }
-    }
-  },
-  {
-    "_id": "67d21be0-ff7c-11e7-9ac0-a903174a3c8d",
-    "_type": "search",
-    "_source": {
-      "title": "Threat Logs - Warning+",
-      "description": "",
-      "hits": 0,
-      "columns": [
-        "DeviceName",
-        "severity_label",
-        "SessionID",
-        "ThreatID",
-        "Threat_ContentType",
-        "Miscellaneous",
-        "SourceIP",
-        "SourceUser",
-        "DestinationIP",
-        "DestinationUser"
-      ],
-      "sort": [
-        "@timestamp",
-        "desc"
-      ],
-      "version": 1,
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"NOT ThreatID:9999 NOT Threat_ContentType:'url' NOT Severity:'low'\"},\"filter\":[]}"
-      }
+      "title": "Apache HTTPD",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   },
   {
@@ -587,6 +185,9 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"panos-config\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   },
   {
@@ -610,6 +211,302 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"panos-system\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "89462f50-bcb9-11e8-827b-5db3eadf5be6",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_WindowsDefender_CM",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"bluecoat-traffic-logs\",\"key\":\"cs-uri-stem\",\"negate\":false,\"params\":{\"query\":\"au.download.windowsupdate.com/d/\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"au.download.windowsupdate.com/d/\"},\"query\":{\"match\":{\"cs-uri-stem\":{\"query\":\"au.download.windowsupdate.com/d/\",\"type\":\"phrase\"}}}},{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"query\":\"kb*\",\"analyze_wildcard\":true}}]}},\"meta\":{\"negate\":true,\"index\":\"bluecoat-traffic-logs\",\"disabled\":false,\"alias\":null,\"type\":\"custom\",\"key\":\"query\",\"value\":\"{\\\"bool\\\":{\\\"must\\\":[{\\\"query_string\\\":{\\\"query\\\":\\\"kb*\\\",\\\"analyze_wildcard\\\":true}}]}}\"},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d5f1e630-bcb6-11e8-827b-5db3eadf5be6",
+    "_type": "search",
+    "_source": {
+      "title": "Query_Wildcard",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"query\":{\"bool\":{\"must\":[{\"query_string\":{\"query\":\"authrootstl*\",\"analyze_wildcard\":true}}]}},\"meta\":{\"index\":\"bluecoat-traffic-logs\",\"disabled\":false,\"alias\":null,\"type\":\"custom\",\"key\":\"query\",\"value\":\"{\\\"bool\\\":{\\\"must\\\":[{\\\"query_string\\\":{\\\"query\\\":\\\"authrootstl*\\\",\\\"analyze_wildcard\\\":true}}]}}\",\"negate\":false},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a897ad30-e8b4-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_Buscando_Cryptomining",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceIP",
+        "DestinationIP",
+        "DestinationPort",
+        "Action",
+        "SourceZone",
+        "Application"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-traffic\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"Application.keyword : *mining* OR Application.keyword : *coin* OR Application.keyword : *crypto*\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "16db2f90-2125-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "squid_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "peerhost",
+        "http_method",
+        "url_port",
+        "http_status_code"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "66b1c540-72df-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "SquidAccess_ICM161_last30",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "url_port",
+        "squid_request_status"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"squidaccess-logs\",\"type\":\"phrase\",\"key\":\"src_ip\",\"value\":\"192.168.142.109\",\"params\":{\"query\":\"192.168.142.109\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"src_ip\":{\"query\":\"192.168.142.109\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e61094e0-8a60-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "SquidAccess_ICM162_last30",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "url_port",
+        "squid_request_status"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"index\":\"squidaccess-logs\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"src_ip\",\"value\":\"192.168.142.110\",\"params\":{\"query\":\"192.168.142.110\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"src_ip\":{\"query\":\"192.168.142.110\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4fca2f40-b72a-11e8-827b-5db3eadf5be6",
+    "_type": "search",
+    "_source": {
+      "title": "Squidaccess_Justicia_503",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src_ip",
+        "url_host",
+        "url_path",
+        "http_status_code"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"squidaccess-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"10.80.79.200 OR 10.80.79.81\"},\"filter\":[{\"meta\":{\"index\":\"squidaccess-logs\",\"type\":\"phrase\",\"key\":\"http_status_code.keyword\",\"value\":\"503\",\"params\":{\"query\":\"503\",\"type\":\"phrase\"},\"disabled\":false,\"negate\":false,\"alias\":null},\"query\":{\"match\":{\"http_status_code.keyword\":{\"query\":\"503\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d69bbcb0-2124-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "pravail_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "blocked_host",
+        "destination",
+        "dstport",
+        "attack_type",
+        "action",
+        "hostname"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"pravail-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "08dc56f0-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "bcevent_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "clientIP",
+        "code",
+        "hostname",
+        "user",
+        "verdict"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bcevent\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "95d11900-ff73-11e7-9ac0-a903174a3c8d",
+    "_type": "search",
+    "_source": {
+      "title": "Blocked URLs",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Miscellaneous",
+        "Action",
+        "SourceIP",
+        "SourceUser"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"Threat_ContentType:'url' NOT Action:'alert'\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "67d21be0-ff7c-11e7-9ac0-a903174a3c8d",
+    "_type": "search",
+    "_source": {
+      "title": "Threat Logs - Warning+",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "DeviceName",
+        "Severity",
+        "SessionID",
+        "ThreatID",
+        "Threat_ContentType",
+        "Miscellaneous",
+        "SourceIP",
+        "SourceUser",
+        "DestinationIP",
+        "DestinationUser"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"NOT ThreatID:9999 NOT Threat_ContentType:'url' NOT Severity:'low'\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   },
   {
@@ -639,6 +536,1633 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"NOT ThreatID:9999 NOT Threat_ContentType:'url'\"},\"filter\":[]}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0af6a4a0-e756-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_131118",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceIP",
+        "DestinationIP",
+        "DestinationPort",
+        "Action",
+        "SourceZone",
+        "Application"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"logs-3c\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"188.225.35.75 OR 195.201.11.73 OR 195.201.11.112 OR 140.82.23.91 OR 45.76.96.233\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "6b43c500-e755-11e8-96fb-c55aa130b2a3",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_131118",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src",
+        "dst",
+        "service",
+        "Action",
+        "device-name"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"17eabef0-c625-11e8-ba0e-7977e4fc9e5b\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"188.225.35.75 OR 195.201.11.73 OR 195.201.11.112 OR 140.82.23.91 OR 45.76.96.233\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "207033b0-ee62-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto Internet Threat Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceIP",
+        "DestinationIP",
+        "DestinationPort",
+        "Application",
+        "RuleName",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Threat\",\"params\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "36bc35b0-ee62-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto CRTM Threat Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceIP",
+        "DestinationIP",
+        "DestinationPort",
+        "Application",
+        "RuleName",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMThreat\",\"params\":{\"query\":\"PAN-OS_CRTMThreat\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMThreat\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "60ac4b30-ee62-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto Internet System Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Content/Threat Type",
+        "Device Name",
+        "Event ID",
+        "Severity",
+        "Type"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-system\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_System\",\"params\":{\"query\":\"PAN-OS_System\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_System\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "72d3a9c0-ee62-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto CRTM System Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Content/Threat Type",
+        "Device Name",
+        "Event ID",
+        "Severity",
+        "Type"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-system\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMSystem\",\"params\":{\"query\":\"PAN-OS_CRTMSystem\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMSystem\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ca636c10-ee5e-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto CRTM Traffic Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceIP",
+        "DestinationIP",
+        "DestinationPort",
+        "Application",
+        "RuleName",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-traffic\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMTraffic\",\"params\":{\"query\":\"PAN-OS_CRTMTraffic\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMTraffic\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "af867040-ee5e-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto Internet Traffic Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "SourceIP",
+        "DestinationIP",
+        "DestinationPort",
+        "Application",
+        "RuleName",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-traffic\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"panos-traffic\",\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Traffic\",\"params\":{\"query\":\"PAN-OS_Traffic\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Traffic\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c5a9b7c0-ee62-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto CRTM Config Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Admin",
+        "Command",
+        "Device Group Hierarchy Level 4",
+        "Type",
+        "Host"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-config\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMConfig\",\"params\":{\"query\":\"PAN-OS_CRTMConfig\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMConfig\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ae52fc80-ee62-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto Internet Config Discovery",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "Admin",
+        "Command",
+        "Device Group Hierarchy Level 4",
+        "Type",
+        "Host"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-config\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Config\",\"params\":{\"query\":\"PAN-OS_Config\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Config\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "43e652a0-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "bluecoat_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "c-ip",
+        "csusername",
+        "cs-uri-stem",
+        "cs-method",
+        "cs-host",
+        "sc-filter-category",
+        "s-action",
+        "cs(User-Agent)"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"bluecoat-traffic-logs\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": []\n}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "MongoDB-search",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"metricset.module:mongodb\"}}, \"index\": \"metricbeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "MongoDB search",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Metricbeat-Redis",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"metricset.module:redis\"}}, \"index\": \"metricbeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Metricbeat Redis",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b6b7ccc0-c98d-11e7-9835-2f31fe08873b",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "beat.name",
+        "windows.service.display_name",
+        "windows.service.state",
+        "windows.service.start_type",
+        "windows.service.uptime.ms",
+        "windows.service.pid",
+        "windows.service.exit_code"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"metricset.module\": {\"query\": \"windows\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"metricbeat-*\", \"value\": \"windows\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"windows\", \"type\": \"phrase\"}, \"key\": \"metricset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"metricset.name\": {\"query\": \"service\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"metricbeat-*\", \"value\": \"service\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"service\", \"type\": \"phrase\"}, \"key\": \"metricset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"metricbeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Services [Metricbeat Windows]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Metricbeat-Rabbitmq",
+    "_type": "search",
+    "_source": {
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"metricset.module:rabbitmq\"}}, \"index\": \"metricbeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Metricbeat-Rabbitmq",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "1c2bcec0-86d1-11e8-b59d-21efb914e65c",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "host.name",
+        "suricata.eve.flow_id",
+        "suricata.eve.src_ip",
+        "suricata.eve.src_port",
+        "suricata.eve.dest_ip",
+        "suricata.eve.dest_port",
+        "source_ecs.geo.country_iso_code",
+        "destination.geo.country_iso_code"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"event.type\": {\"query\": \"alert\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"alert\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"alert\", \"type\": \"phrase\"}, \"key\": \"event.type\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.module\": {\"query\": \"suricata\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"suricata\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"suricata\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Alerts [Suricata]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "13dd22f0-86cc-11e8-b59d-21efb914e65c",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "host.name",
+        "event.type",
+        "suricata.eve.flow_id",
+        "suricata.eve.proto",
+        "source_ecs.ip",
+        "suricata.eve.src_port",
+        "suricata.eve.dest_ip",
+        "suricata.eve.dest_port",
+        "destination.geo.region_name",
+        "destination.geo.country_iso_code"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"event.type\": {\"query\": \"stats\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"stats\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"stats\", \"type\": \"phrase\"}, \"key\": \"event.type\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.module\": {\"query\": \"suricata\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"suricata\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"suricata\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Events [Suricata]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d57a2db0-86ca-11e8-b59d-21efb914e65c",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "host.name",
+        "suricata.eve.stats.detect.alert",
+        "suricata.eve.stats.app_layer.flow.dns_udp",
+        "suricata.eve.stats.app_layer.flow.tls",
+        "suricata.eve.stats.app_layer.flow.http",
+        "suricata.eve.stats.app_layer.flow.ssh",
+        "suricata.eve.stats.tcp.sessions"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"suricata\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"suricata\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"suricata\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"event.type\": {\"query\": \"stats\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"stats\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"stats\", \"type\": \"phrase\"}, \"key\": \"event.type\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Host Stats [Suricata]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Apache2-errors-log",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "apache2.error.client",
+        "apache2.error.level",
+        "apache2.error.module",
+        "apache2.error.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:apache2.error\"}}, \"index\": \"filebeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Apache errors log [Filebeat Apache2]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Apache2-access-logs",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "apache2.access.remote_ip",
+        "apache2.access.method",
+        "apache2.access.url",
+        "apache2.access.response_code"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:apache2.access\"}}, \"index\": \"filebeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Apache access logs [Filebeat Apache2]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4ac0a370-0a11-11e7-8b04-eb22a5669f27",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "auditd.log.record_type",
+        "auditd.log.sequence",
+        "auditd.log.acct"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:auditd.log\"}}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Audit Events [Filebeat Auditd]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Kafka stacktraces",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "kafka.log.class",
+        "kafka.log.trace.class",
+        "kafka.log.trace.full"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"_exists_:kafka.log.trace.class\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Stacktraces [Filebeat Kafka]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "All Kafka logs",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "kafka.log.level",
+        "kafka.log.component",
+        "kafka.log.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"kafka\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"kafka\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"kafka\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"log\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"log\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"log\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "All logs [Filebeat Kafka]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "PostgreSQL All Logs",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "postgresql.log.user",
+        "postgresql.log.database",
+        "postgresql.log.level",
+        "postgresql.log.message",
+        "postgresql.log.query"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"postgresql\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"postgresql\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"postgresql\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "All Logs [Filebeat PostgreSQL]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Slow PostgreSQL Queries",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "postgresql.log.user",
+        "postgresql.log.database",
+        "postgresql.log.duration",
+        "postgresql.log.query"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"postgresql.log.duration:>30\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Slow Queries [Filebeat PostgreSQL]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "PostgreSQL Query Durations",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "postgresql.log.user",
+        "postgresql.log.database",
+        "postgresql.log.duration",
+        "postgresql.log.query"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"postgresql.log.duration:*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Query Durations [Filebeat PostgreSQL]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e49fe000-0a7e-11e8-bffe-ff7d4f68cf94",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "mongodb.log.timestamp",
+        "mongodb.log.severity",
+        "mongodb.log.component",
+        "mongodb.log.context",
+        "mongodb.log.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"mongodb.log.severity: F or mongodb.log.severity: W\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Error logs [Filebeat MongoDB]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "bfc96a60-0a80-11e8-bffe-ff7d4f68cf94",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "mongodb.log.timestamp",
+        "mongodb.log.severity",
+        "mongodb.log.component",
+        "mongodb.log.context",
+        "mongodb.log.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"mongodb.log.severity: *\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "mongodb.log.timestamp",
+        "asc"
+      ],
+      "title": "All logs [Filebeat MongoDB]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Metricbeat uWSGI status",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"metricbeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"metricset.module: uwsgi\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Metricbeat uWSGI status",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Filebeat-MySQL-error-log",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "mysql.error.level",
+        "mysql.error.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"filebeat-*\", \"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"mysql\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"mysql\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"mysql\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"error\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"error\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"error\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Error logs [Filebeat MySQL]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Filebeat-MySQL-Slow-log",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"filebeat-*\", \"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"mysql\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"mysql\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"mysql\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"slowlog\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"slowlog\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"slowlog\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Slow logs [Filebeat MySQL]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "742e45d0-cbdd-11e7-9852-73e0a9df1bb6",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "logstash.slowlog.level",
+        "logstash.slowlog.plugin_type",
+        "logstash.slowlog.plugin_name",
+        "logstash.slowlog.message",
+        "logstash.slowlog.plugin_params",
+        "logstash.slowlog.execution_time_ns"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"logstash\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"logstash\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"logstash\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"slowlog\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"slowlog\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"slowlog\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "logstash.slowlog.level",
+        "asc"
+      ],
+      "title": "Slow logs [Filebeat Logstash]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "cfaba090-cbda-11e7-9852-73e0a9df1bb6",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "logstash.log.level",
+        "logstash.log.module",
+        "logstash.log.message",
+        "source"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"logstash\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"logstash\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"logstash\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"log\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"log\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"log\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "logs [Filebeat Logstash]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b6f321e0-fa25-11e6-bbd3-29c986c96e5a",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "system.auth.user",
+        "system.auth.sudo.user",
+        "system.auth.sudo.pwd",
+        "system.auth.sudo.command"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"highlightAll\": true, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:system.auth.sudo\"}}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Sudo commands [Filebeat System]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c876e6a0-2418-11e7-a83b-d5f4cebac9ff",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "icinga.debug.facility",
+        "icinga.debug.severity",
+        "icinga.debug.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"icinga\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"icinga\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"icinga\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"debug\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"debug\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"debug\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Debug Log [Filebeat Icinga]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ffaf5a30-2413-11e7-a0d9-39604d45ca7f",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "icinga.main.facility",
+        "icinga.main.severity",
+        "icinga.main.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"icinga\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"icinga\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"icinga\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"main\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"main\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"main\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Main Log [Filebeat Icinga]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "710043e0-2417-11e7-a83b-d5f4cebac9ff",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "icinga.startup.facility",
+        "icinga.startup.severity",
+        "icinga.startup.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"icinga.startup.severity:critical\"}}, \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Startup Errors [Filebeat Icinga]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Filebeat-Nginx-module",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "nginx.access.url",
+        "nginx.access.method",
+        "nginx.access.response_code",
+        "nginx.access.referrer",
+        "nginx.access.body_sent.bytes"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"filebeat-*\", \"filter\": [], \"version\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:nginx\"}}, \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Nginx logs [Filebeat Nginx]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ML-Filebeat-Nginx-Access",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "Filebeat Nginx Access Data",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:nginx.access\"}}, \"index\": \"filebeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "ML Access Data [Filebeat Nginx]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Filebeat-Traefik-module",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:traefik\"}}, \"index\": \"filebeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Traefik logs [Filebeat Traefik]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "73613570-4791-11e7-be88-2ddb32f3df97",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "beat.name",
+        "redis.log.level",
+        "redis.log.role",
+        "redis.log.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"fileset.module\": {\"query\": \"redis\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"redis\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"redis\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"log\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"log\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"log\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Logs [Filebeat Redis]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0ab87b80-478e-11e7-b1f0-cb29bac6bf8b",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "beat.name",
+        "message",
+        "redis.slowlog.duration.us",
+        "redis.slowlog.key"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:redis.slowlog\"}}, \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Slow logs [Filebeat Redis]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "8030c1b0-fa77-11e6-ae9b-81e5311e8cab",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "system.auth.useradd.name",
+        "system.auth.useradd.uid",
+        "system.auth.useradd.gid",
+        "system.auth.useradd.home",
+        "system.auth.useradd.shell"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"highlightAll\": true, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:system.auth.useradd\"}}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "useradd logs [Filebeat System]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "eb0039f0-fa7f-11e6-a1df-a78bd7504d38",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "system.auth.groupadd.name",
+        "system.auth.groupadd.gid"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"highlightAll\": true, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:system.auth.groupadd\"}}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "groupadd logs [Filebeat System]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "62439dc0-f9c9-11e6-a747-6121780e0414",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "system.auth.ssh.event",
+        "system.auth.ssh.method",
+        "system.auth.user",
+        "system.auth.ssh.ip",
+        "system.auth.ssh.geoip.country_iso_code"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"index\": \"filebeat-*\", \"highlightAll\": true, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:system.auth.ssh.event\"}}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "SSH login attempts [Filebeat System]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Syslog-system-logs",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "system.syslog.hostname",
+        "system.syslog.program",
+        "system.syslog.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:system.syslog\"}}, \"highlightAll\": true, \"index\": \"filebeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Syslog logs [Filebeat System]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "9eb25600-a1f0-11e7-928f-5dbe6f6f5519",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "nginx.error.level",
+        "nginx.error.message"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"filebeat-*\", \"filter\": [], \"version\": true, \"query\": {\"query\": \"_exists_:nginx AND _exists_:nginx.error.message\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Nginx error logs [Filebeat Nginx]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "6d9e66d0-a1f0-11e7-928f-5dbe6f6f5519",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "nginx.access.url",
+        "nginx.access.method",
+        "nginx.access.response_code",
+        "nginx.access.body_sent.bytes"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\": \"filebeat-*\", \"filter\": [], \"version\": true, \"query\": {\"query\": \"_exists_:nginx AND _exists_:nginx.access.url\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Nginx access logs [Filebeat Nginx]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ML-Filebeat-Traefik-Access",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "Filebeat Traefik Access Data",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"_exists_:traefik.access\"}}, \"index\": \"filebeat-*\"}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "ML Access Data [Filebeat Traefik]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "7a9482d0-eb00-11e7-8f04-51231daa5b05",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "osquery.result.columns.path",
+        "osquery.result.columns.type",
+        "osquery.result.columns.flags"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"osquery.result.name\": {\"query\": \"pack_it-compliance_mounts\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"pack_it-compliance_mounts\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"pack_it-compliance_mounts\", \"type\": \"phrase\"}, \"key\": \"osquery.result.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Mounts [Osquery results]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "3824b080-eb02-11e7-8f04-51231daa5b05",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "osquery.result.columns.name",
+        "osquery.result.columns.version",
+        "osquery.result.columns.revision"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"osquery.result.name\": {\"query\": \"pack_it-compliance_deb_packages\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"pack_it-compliance_deb_packages\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"pack_it-compliance_deb_packages\", \"type\": \"phrase\"}, \"key\": \"osquery.result.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "DEB packages installed [Osquery results]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "b5d6baa0-eb02-11e7-8f04-51231daa5b05",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "osquery.result.name"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"osquery.result.name\": {\"query\": \"pack_it-compliance_os_version\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"pack_it-compliance_os_version\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"pack_it-compliance_os_version\", \"type\": \"phrase\"}, \"key\": \"osquery.result.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "OS versions [Osquery results]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f59e21e0-eb03-11e7-8f04-51231daa5b05",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "osquery.result.name",
+        "osquery.result.columns.name",
+        "osquery.result.columns.status"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"osquery.result.name\": {\"query\": \"pack_it-compliance_kernel_modules\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"pack_it-compliance_kernel_modules\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"pack_it-compliance_kernel_modules\", \"type\": \"phrase\"}, \"key\": \"osquery.result.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "Kernel modules [Osquery results]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0fe5dc00-f49b-11e7-8647-534bb4c21040",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "osquery.result.name",
+        "osquery.result.columns.path",
+        "beat.hostname"
+      ],
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"prefix\": {\"osquery.result.name\": \"pack_ossec-rootkit\"}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"{\\\"prefix\\\":{\\\"osquery.result.name\\\":\\\"pack_ossec-rootkit\\\"}}\", \"disabled\": false, \"alias\": null, \"key\": \"query\", \"negate\": false, \"type\": \"custom\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.module\": {\"query\": \"osquery\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"osquery\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"osquery\", \"type\": \"phrase\"}, \"key\": \"fileset.module\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"fileset.name\": {\"query\": \"result\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"filebeat-*\", \"value\": \"result\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"result\", \"type\": \"phrase\"}, \"key\": \"fileset.name\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"filebeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "OSSEC Rootkits [Osquery Result]",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4b44a7b0-2305-11e9-b79a-579e1147c51c",
+    "_type": "search",
+    "_source": {
+      "title": "vic",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "GeneratedTime",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"panos-threat\",\"key\":\"tags\",\"negate\":false,\"params\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"PAN-OS_Threat\"},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"panos-threat\",\"key\":\"DeviceName\",\"negate\":false,\"params\":{\"query\":\"FW-NightsWatch-3C-02\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"FW-NightsWatch-3C-02\"},\"query\":{\"match\":{\"DeviceName\":{\"query\":\"FW-NightsWatch-3C-02\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"globalState\"},\"exists\":{\"field\":\"Threat_ContentType\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"panos-threat\",\"key\":\"Threat_ContentType\",\"negate\":false,\"type\":\"exists\",\"value\":\"exists\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "87a010b0-ed9e-11e8-bd11-03e4f6eb3ef5",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_PUP_drp_Jan2019.su",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"*drp.su\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "1d504970-1b2d-11e9-b79a-579e1147c51c",
+    "_type": "search",
+    "_source": {
+      "title": "19-5886194",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"10.176.104.20\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "052c8de0-2307-11e9-b79a-579e1147c51c",
+    "_type": "search",
+    "_source": {
+      "title": "Palo Alto Threat Logs vrs7",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "ThreatID",
+        "Threat_ContentType",
+        "SourceIP",
+        "SourceUser",
+        "DestinationIP"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"panos-threat\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"NOT ThreatID:9999 NOT Threat_ContentType:'url'\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"panos-threat\",\"key\":\"Threat_ContentType\",\"negate\":false,\"params\":{\"query\":\"spyware\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"spyware\"},\"query\":{\"match\":{\"Threat_ContentType\":{\"query\":\"spyware\",\"type\":\"phrase\"}}}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "791e3f30-6fd6-11e8-b2a8-bde548a1fb26",
+    "_type": "search",
+    "_source": {
+      "title": "checkpoint_92.63.193.134",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src",
+        "dst",
+        "device",
+        "service",
+        "rule",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"checkpoint-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"checkpoint-logs\",\"key\":\"src\",\"negate\":false,\"params\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"92.63.193.134\"},\"query\":{\"match\":{\"src\":{\"query\":\"92.63.193.134\",\"type\":\"phrase\"}}}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "7ea7ac90-2123-11e8-82c2-3d7da031f151",
+    "_type": "search",
+    "_source": {
+      "title": "checkpoint_discover",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "src",
+        "dst",
+        "service_id",
+        "product_family",
+        "device-name",
+        "rule",
+        "Action"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"checkpoint-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"*\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "e8605060-2a05-11e9-b79a-579e1147c51c",
+    "_type": "search",
+    "_source": {
+      "title": "Password Expired",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bcevent\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"password expired\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "66f80650-341c-11e9-b79a-579e1147c51c",
+    "_type": "search",
+    "_source": {
+      "title": "Vpn Aplicaciones Justicia",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "user",
+        "user_group",
+        "resource"
+      ],
+      "sort": [
+        "realdate",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"checkpoint-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"kuery\",\"query\":\"*\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"checkpoint-traffic-logs\",\"key\":\"device-name\",\"negate\":false,\"params\":{\"query\":\"fw-extra-institucional\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"fw-extra-institucional\"},\"query\":{\"match\":{\"device-name\":{\"query\":\"fw-extra-institucional\",\"type\":\"phrase\"}}}},{\"meta\":{\"index\":\"checkpoint-traffic-logs\",\"type\":\"phrases\",\"key\":\"user_group\",\"value\":\"SSLVPN_ROL_GAR-APLICACIONES-JUSTICIA, SSLVPN_LDAP_APLICACIONES-JUSTICIA\",\"params\":[\"SSLVPN_ROL_GAR-APLICACIONES-JUSTICIA\",\"SSLVPN_LDAP_APLICACIONES-JUSTICIA\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"user_group\":\"SSLVPN_ROL_GAR-APLICACIONES-JUSTICIA\"}},{\"match_phrase\":{\"user_group\":\"SSLVPN_LDAP_APLICACIONES-JUSTICIA\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ec2e5a90-3e99-11e9-a3ff-b7e029b40424",
+    "_type": "search",
+    "_source": {
+      "title": "Panda_PC669485_Biblioteca",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "_source"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"bluecoat-traffic-logs\",\"highlightAll\":true,\"version\":true,\"query\":{\"query\":\"10.108.37.226\",\"language\":\"lucene\"},\"filter\":[]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   }
 ]
