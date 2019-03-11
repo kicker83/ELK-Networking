@@ -1,19 +1,775 @@
 [
   {
+    "_id": "AV4REOpp5NkDleZmzKkE",
+    "_type": "dashboard",
+    "_source": {
+      "description": "Overview of docker containers",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [{\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}], \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"Docker-containers\", \"size_x\": 7, \"size_y\": 5, \"panelIndex\": 1, \"col\": 1, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"Docker-Number-of-Containers\", \"size_x\": 5, \"size_y\": 2, \"panelIndex\": 2, \"col\": 8, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"Docker-containers-per-host\", \"size_x\": 2, \"size_y\": 3, \"panelIndex\": 3, \"col\": 8, \"row\": 3}, {\"type\": \"visualization\", \"id\": \"Docker-images-and-names\", \"size_x\": 3, \"size_y\": 3, \"panelIndex\": 7, \"col\": 10, \"row\": 3}, {\"type\": \"visualization\", \"id\": \"Docker-CPU-usage\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 4, \"col\": 1, \"row\": 6}, {\"type\": \"visualization\", \"id\": \"Docker-memory-usage\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 5, \"col\": 7, \"row\": 6}, {\"type\": \"visualization\", \"id\": \"Docker-Network-IO\", \"size_x\": 12, \"size_y\": 3, \"panelIndex\": 6, \"col\": 1, \"row\": 9}]",
+      "timeRestore": false,
+      "title": "[Metricbeat Docker] Overview",
+      "uiStateJSON": "{\"P-5\": {\"vis\": {\"legendOpen\": true}}, \"P-7\": {\"vis\": {\"legendOpen\": true}}, \"P-1\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": 1, \"direction\": \"asc\"}}}}, \"P-2\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}, \"P-3\": {\"vis\": {\"legendOpen\": true}}}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "CPU-slash-Memory-per-container",
+    "_type": "dashboard",
+    "_source": {
+      "description": "Overview of container metrics",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"Container-CPU-usage\", \"size_x\": 12, \"size_y\": 3, \"panelIndex\": 2, \"col\": 1, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"System-Navigation\", \"size_x\": 12, \"size_y\": 1, \"panelIndex\": 3, \"col\": 1, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"Container-Memory-stats\", \"size_x\": 12, \"size_y\": 3, \"panelIndex\": 4, \"col\": 1, \"row\": 5}, {\"type\": \"visualization\", \"id\": \"Container-Block-IO\", \"size_x\": 12, \"size_y\": 4, \"panelIndex\": 5, \"col\": 1, \"row\": 8}]",
+      "timeRestore": false,
+      "title": "[Metricbeat System] Containers overview",
+      "uiStateJSON": "{\"P-4\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"P-5\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"P-2\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "79ffd6e0-faa0-11e6-947f-177f697178b8",
+    "_type": "dashboard",
+    "_source": {
+      "description": "Overviw of host metrics",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"beat.name:\\\"kibana01\\\"\", \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"6b7b9a40-faa1-11e6-86b1-cd7735ff7e23\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 1, \"col\": 1, \"row\": 12}, {\"type\": \"visualization\", \"id\": \"4d546850-1b15-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 2, \"col\": 7, \"row\": 6}, {\"type\": \"visualization\", \"id\": \"089b85d0-1b16-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 3, \"col\": 7, \"row\": 12}, {\"type\": \"visualization\", \"id\": \"bfa5e400-1b16-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 4, \"col\": 1, \"row\": 9}, {\"type\": \"visualization\", \"id\": \"e0f001c0-1b18-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 5, \"col\": 7, \"row\": 15}, {\"type\": \"visualization\", \"id\": \"2e224660-1b19-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 6, \"col\": 1, \"row\": 15}, {\"type\": \"visualization\", \"id\": \"ab2d1e90-1b1a-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 7, \"col\": 1, \"row\": 6}, {\"type\": \"visualization\", \"id\": \"4e4bb1e0-1b1b-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 8, \"col\": 7, \"row\": 9}, {\"type\": \"visualization\", \"id\": \"26732e20-1b91-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 9, \"col\": 5, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"83e12df0-1b91-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 10, \"col\": 1, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"d3166e80-1b91-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 11, \"col\": 3, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"522ee670-1b92-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 12, \"col\": 7, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"1aae9140-1b93-11e7-8ada-3df93aab833e\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 13, \"col\": 9, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"34f97ee0-1b96-11e7-8ada-3df93aab833e\", \"size_x\": 4, \"size_y\": 2, \"panelIndex\": 14, \"col\": 9, \"row\": 4}, {\"type\": \"visualization\", \"id\": \"System-Navigation\", \"size_x\": 6, \"size_y\": 1, \"panelIndex\": 16, \"col\": 1, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"19e123b0-4d5a-11e7-aee5-fdc812cc3bec\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 21, \"col\": 1, \"row\": 4}, {\"type\": \"visualization\", \"id\": \"d2e80340-4d5c-11e7-aa29-87a97a796de6\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 22, \"col\": 3, \"row\": 4}, {\"type\": \"visualization\", \"id\": \"825fdb80-4d1d-11e7-b5f2-2b7c1895bf32\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 23, \"col\": 7, \"row\": 4}, {\"type\": \"visualization\", \"id\": \"96976150-4d5d-11e7-aa29-87a97a796de6\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 25, \"col\": 11, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"99381c80-4d60-11e7-9a4c-ed99bbcaa42b\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 27, \"col\": 1, \"row\": 18}, {\"type\": \"visualization\", \"id\": \"c5e3cf90-4d60-11e7-9a4c-ed99bbcaa42b\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 28, \"col\": 7, \"row\": 18}, {\"type\": \"visualization\", \"id\": \"590a60f0-5d87-11e7-8884-1bb4c3b890e4\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 29, \"col\": 5, \"row\": 4}, {\"type\": \"visualization\", \"id\": \"3d65d450-a9c3-11e7-af20-67db8aecb295\", \"size_x\": 6, \"size_y\": 1, \"panelIndex\": 30, \"col\": 7, \"row\": 1}]",
+      "timeRestore": false,
+      "title": "[Metricbeat System] Host overview",
+      "uiStateJSON": "{\"P-29\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "AWAnBksQwICFUdVKZL_z",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Squid_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"x\":13,\"y\":15,\"w\":12,\"h\":18,\"i\":\"1\"},\"id\":\"AWAnAHkHwICFUdVKWPOe\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":16,\"y\":33,\"w\":16,\"h\":20,\"i\":\"2\"},\"id\":\"AWAnAS4TwICFUdVKWmhZ\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":33,\"w\":16,\"h\":20,\"i\":\"3\"},\"id\":\"AWAnAmeZwICFUdVKXONB\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":32,\"y\":33,\"w\":16,\"h\":20,\"i\":\"4\"},\"id\":\"AWAnAYxWwICFUdVKWx8-\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":53,\"w\":48,\"h\":15,\"i\":\"5\"},\"id\":\"AWAnBE47wICFUdVKYMbg\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":15,\"w\":13,\"h\":18,\"i\":\"6\"},\"id\":\"AWAnB21qwICFUdVKZugH\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":25,\"y\":15,\"w\":12,\"h\":18,\"i\":\"7\"},\"id\":\"AWAnBxx3wICFUdVKZkSO\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":15,\"i\":\"9\"},\"id\":\"4b9eefa0-6fae-11e8-b2a8-bde548a1fb26\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":37,\"y\":15,\"w\":11,\"h\":18,\"i\":\"10\"},\"version\":\"6.4.1\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"id\":\"a60acef0-c882-11e8-88d0-354376b610f9\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-30m",
+      "refreshInterval": {
+        "pause": false,
+        "value": 30000
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "135eaf60-60bc-11e7-908b-6703bc11b046",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Junos_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":6,\"y\":3,\"w\":6,\"h\":3,\"i\":\"1\"},\"id\":\"161ab790-60bb-11e7-908b-6703bc11b046\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":6,\"y\":9,\"w\":6,\"h\":3,\"i\":\"2\"},\"id\":\"fb6d61d0-60bb-11e7-908b-6703bc11b046\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":0,\"y\":9,\"w\":6,\"h\":3,\"i\":\"3\"},\"id\":\"2cbec4a0-60bb-11e7-908b-6703bc11b046\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":3,\"w\":6,\"h\":3,\"i\":\"4\"},\"id\":\"fbbc61a0-60ba-11e7-908b-6703bc11b046\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":6,\"w\":6,\"h\":3,\"i\":\"5\"},\"id\":\"f55b78c0-6239-11e7-aa65-efec9d52726c\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":6,\"y\":6,\"w\":6,\"h\":3,\"i\":\"6\"},\"id\":\"2f9e1240-67cb-11e7-8b77-45c94e689aee\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":12,\"w\":6,\"h\":4,\"i\":\"13\"},\"embeddableConfig\":{\"vis\":{\"defaultColors\":{\"0 - 750\":\"rgb(255,255,204)\",\"1,500 - 2,250\":\"rgb(254,217,118)\",\"2,250 - 3,000\":\"rgb(254,178,76)\",\"3,000 - 3,750\":\"rgb(253,141,60)\",\"3,750 - 4,500\":\"rgb(252,78,42)\",\"4,500 - 5,250\":\"rgb(227,27,28)\",\"5,250 - 6,000\":\"rgb(189,0,38)\",\"750 - 1,500\":\"rgb(255,237,160)\"}}},\"id\":\"AWASD0-aFcWplWKfYXE_\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":6,\"y\":12,\"w\":6,\"h\":4,\"i\":\"14\"},\"id\":\"AWGUOW8imydedmX4lDwG\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":3,\"i\":\"15\"},\"version\":\"6.2.4\",\"type\":\"visualization\",\"id\":\"67816390-1d67-11e8-ae98-99c4d1875bf9\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "BlueCoat_Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BlueCoat_Office365_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":3,\"i\":\"4\",\"w\":4,\"x\":8,\"y\":7},\"id\":\"BlueCoat_HTTP_Action_Top15\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":5,\"i\":\"5\",\"w\":4,\"x\":8,\"y\":13},\"id\":\"Bluecoat_HTTP_Destination_Hosts_Top15\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":5,\"i\":\"6\",\"w\":4,\"x\":0,\"y\":13},\"id\":\"Bluecoat_HTTP_UserAgent_Top15\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":5,\"i\":\"7\",\"w\":4,\"x\":4,\"y\":13},\"id\":\"Bluecoat_UserRequests_Top15\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":4,\"i\":\"8\",\"w\":4,\"x\":4,\"y\":3},\"id\":\"Bluecoat_HTTP_ContentType_Top15\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":4,\"i\":\"9\",\"w\":4,\"x\":0,\"y\":3},\"id\":\"Bluecoat_HTTP_Category_Count_Top15\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"11\",\"w\":4,\"x\":0,\"y\":18},\"id\":\"Bluecoat_UserAgentOS_Top10\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"gridData\":{\"h\":4,\"i\":\"14\",\"w\":4,\"x\":8,\"y\":3},\"id\":\"Bluecoat_Users_SumOfBytes_Top15\",\"panelIndex\":\"14\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"15\",\"w\":4,\"x\":4,\"y\":7},\"id\":\"Bluecoat_SC-Filter-Result_Top15\",\"panelIndex\":\"15\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"18\",\"w\":6,\"x\":6,\"y\":10},\"id\":\"5a510e70-1aaf-11e7-8702-bf6a2f002df4\",\"panelIndex\":\"18\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"19\",\"w\":6,\"x\":0,\"y\":10},\"id\":\"81118ab0-1ab6-11e7-8702-bf6a2f002df4\",\"panelIndex\":\"19\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"embeddableConfig\":{\"spy\":null},\"gridData\":{\"h\":3,\"i\":\"20\",\"w\":4,\"x\":0,\"y\":0},\"id\":\"67696550-1b7a-11e7-b828-b1077ad4a591\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"21\",\"w\":8,\"x\":4,\"y\":0},\"id\":\"2bf2cae0-566f-11e7-8f65-45fe29c2a79e\",\"panelIndex\":\"21\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"gridData\":{\"h\":3,\"i\":\"22\",\"w\":4,\"x\":0,\"y\":7},\"id\":\"d9bf2040-3565-11e7-adcc-b9caa1d92bc1\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.2.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*.office365.com OR *.microsoftonline.com OR *.office.com OR *.live.com OR *.windows.net OR *.office.net OR *.skypeforbusiness.com OR *.skype.com OR *.lync.com\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "98eddc30-9471-11e7-97fb-638fabcc1e4d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Checkpoint_VPNCommunities_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":12,\"w\":6,\"h\":3,\"i\":\"1\"},\"id\":\"7d8c4c70-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":6,\"y\":9,\"w\":6,\"h\":3,\"i\":\"2\"},\"id\":\"399501b0-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":6,\"y\":3,\"w\":6,\"h\":3,\"i\":\"3\"},\"id\":\"05956440-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":9,\"w\":6,\"h\":3,\"i\":\"7\"},\"id\":\"992b2e20-9212-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":0,\"y\":3,\"w\":6,\"h\":3,\"i\":\"8\"},\"id\":\"4d592050-9213-11e7-9aa6-35baef0417cd\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":6,\"y\":6,\"w\":6,\"h\":3,\"i\":\"9\"},\"id\":\"892e53e0-9216-11e7-8c4e-ddc3f34698b7\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":0,\"y\":0,\"w\":6,\"h\":3,\"i\":\"12\"},\"id\":\"61381490-9471-11e7-97fb-638fabcc1e4d\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":6,\"y\":0,\"w\":6,\"h\":3,\"i\":\"13\"},\"id\":\"1887e690-947a-11e7-be15-07c643dea504\",\"type\":\"visualization\",\"version\":\"6.2.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":0,\"y\":6,\"w\":6,\"h\":3,\"i\":\"14\"},\"id\":\"fb83ea80-3efb-11e8-82c2-3d7da031f151\",\"type\":\"visualization\",\"version\":\"6.2.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
     "_id": "f808a120-478f-11e7-81a9-872103d55812",
     "_type": "dashboard",
     "_source": {
       "title": "Pravail_Dashboard",
       "hits": 0,
       "description": "",
-      "panelsJSON": "[{\"col\":1,\"id\":\"e5eef3a0-478e-11e7-81a9-872103d55812\",\"panelIndex\":1,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"cd839ea0-478f-11e7-81a9-872103d55812\",\"panelIndex\":2,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"86dec010-478f-11e7-81a9-872103d55812\",\"panelIndex\":4,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"8fbe5e10-4790-11e7-81a9-872103d55812\",\"panelIndex\":5,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"}]",
+      "panelsJSON": "[{\"gridData\":{\"h\":20,\"i\":\"1\",\"w\":24,\"x\":0,\"y\":20},\"id\":\"e5eef3a0-478e-11e7-81a9-872103d55812\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":20,\"i\":\"2\",\"w\":24,\"x\":24,\"y\":20},\"id\":\"cd839ea0-478f-11e7-81a9-872103d55812\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":20,\"i\":\"4\",\"w\":24,\"x\":24,\"y\":0},\"id\":\"86dec010-478f-11e7-81a9-872103d55812\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":20,\"i\":\"5\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"8fbe5e10-4790-11e7-81a9-872103d55812\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "3d6a5ef0-2e9b-11e8-82c2-3d7da031f151",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Panda_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":12,\"i\":\"1\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"0ee9e020-2e80-11e8-82c2-3d7da031f151\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"2\",\"w\":24,\"x\":24,\"y\":0},\"id\":\"9e699240-2e8f-11e8-82c2-3d7da031f151\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"3\",\"w\":24,\"x\":0,\"y\":12},\"id\":\"81a442e0-2e99-11e8-82c2-3d7da031f151\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"4\",\"w\":24,\"x\":24,\"y\":12},\"id\":\"fa054860-2cf5-11e8-82c2-3d7da031f151\",\"panelIndex\":\"4\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "614ea7f0-bcd9-11e8-827b-5db3eadf5be6",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BlueCoat_traffic_Office365_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"20\",\"gridData\":{\"x\":0,\"y\":0,\"w\":11,\"h\":11,\"i\":\"20\"},\"embeddableConfig\":{\"spy\":null},\"id\":\"67696550-1b7a-11e7-b828-b1077ad4a591\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"25\",\"gridData\":{\"x\":38,\"y\":0,\"w\":10,\"h\":11,\"i\":\"25\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_UniqData\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"26\",\"gridData\":{\"x\":0,\"y\":11,\"w\":16,\"h\":16,\"i\":\"26\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_Category_Count_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"27\",\"gridData\":{\"x\":16,\"y\":11,\"w\":16,\"h\":16,\"i\":\"27\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_ContentType_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"28\",\"gridData\":{\"x\":32,\"y\":11,\"w\":16,\"h\":16,\"i\":\"28\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_Users_SumOfBytes_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"29\",\"gridData\":{\"x\":0,\"y\":27,\"w\":16,\"h\":12,\"i\":\"29\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_HTTP_Method_Count\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"30\",\"gridData\":{\"x\":32,\"y\":27,\"w\":16,\"h\":12,\"i\":\"30\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_SC-Filter-Result_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"31\",\"gridData\":{\"x\":24,\"y\":71,\"w\":24,\"h\":14,\"i\":\"31\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_TopConnectionType\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"32\",\"gridData\":{\"x\":0,\"y\":39,\"w\":24,\"h\":12,\"i\":\"32\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_CS-SC_Bytes\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"33\",\"gridData\":{\"x\":0,\"y\":51,\"w\":16,\"h\":20,\"i\":\"33\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_UserAgent_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"34\",\"gridData\":{\"x\":16,\"y\":51,\"w\":16,\"h\":20,\"i\":\"34\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_UserRequests_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"35\",\"gridData\":{\"x\":32,\"y\":51,\"w\":16,\"h\":20,\"i\":\"35\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_HTTP_Destination_Hosts_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"36\",\"gridData\":{\"x\":0,\"y\":71,\"w\":24,\"h\":14,\"i\":\"36\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_UserAgentOS_Top10\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"37\",\"gridData\":{\"x\":16,\"y\":27,\"w\":16,\"h\":12,\"i\":\"37\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_Action_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"38\",\"gridData\":{\"x\":24,\"y\":39,\"w\":24,\"h\":12,\"i\":\"38\"},\"embeddableConfig\":{},\"id\":\"BlueCoat_traffic_Average_ResponseTime\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"39\",\"gridData\":{\"x\":11,\"y\":0,\"w\":27,\"h\":11,\"i\":\"39\"},\"embeddableConfig\":{},\"id\":\"BlueCoat_traffic_HTTPRequestsPerSecond\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "display": "Off",
+        "pause": false,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*.office365.com OR *.microsoftonline.com OR *.office.com OR *.live.com OR *.windows.net OR *.office.net OR *.skypeforbusiness.com OR *.skype.com OR *.lync.com\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "deaa9d70-2086-11e8-82c2-3d7da031f151",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BlueCoat_traffic_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"20\",\"gridData\":{\"x\":0,\"y\":0,\"w\":11,\"h\":11,\"i\":\"20\"},\"embeddableConfig\":{\"spy\":null},\"id\":\"67696550-1b7a-11e7-b828-b1077ad4a591\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"25\",\"gridData\":{\"x\":38,\"y\":0,\"w\":10,\"h\":11,\"i\":\"25\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_UniqData\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"26\",\"gridData\":{\"x\":0,\"y\":11,\"w\":16,\"h\":16,\"i\":\"26\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_Category_Count_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"27\",\"gridData\":{\"x\":16,\"y\":11,\"w\":16,\"h\":16,\"i\":\"27\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_ContentType_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"28\",\"gridData\":{\"x\":32,\"y\":11,\"w\":16,\"h\":16,\"i\":\"28\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_Users_SumOfBytes_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"29\",\"gridData\":{\"x\":0,\"y\":27,\"w\":16,\"h\":12,\"i\":\"29\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_HTTP_Method_Count\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"30\",\"gridData\":{\"x\":32,\"y\":27,\"w\":16,\"h\":12,\"i\":\"30\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_SC-Filter-Result_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"31\",\"gridData\":{\"x\":24,\"y\":71,\"w\":24,\"h\":14,\"i\":\"31\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_TopConnectionType\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"32\",\"gridData\":{\"x\":0,\"y\":39,\"w\":24,\"h\":12,\"i\":\"32\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_CS-SC_Bytes\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"33\",\"gridData\":{\"x\":0,\"y\":51,\"w\":16,\"h\":20,\"i\":\"33\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_UserAgent_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"34\",\"gridData\":{\"x\":16,\"y\":51,\"w\":16,\"h\":20,\"i\":\"34\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_UserRequests_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"35\",\"gridData\":{\"x\":32,\"y\":51,\"w\":16,\"h\":20,\"i\":\"35\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_HTTP_Destination_Hosts_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"36\",\"gridData\":{\"x\":0,\"y\":71,\"w\":24,\"h\":14,\"i\":\"36\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_traffic_UserAgentOS_Top10\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"37\",\"gridData\":{\"x\":16,\"y\":27,\"w\":16,\"h\":12,\"i\":\"37\"},\"embeddableConfig\":{},\"id\":\"Bluecoat_Traffic_Traffic_HTTP_Action_Top15\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"38\",\"gridData\":{\"x\":24,\"y\":39,\"w\":24,\"h\":12,\"i\":\"38\"},\"embeddableConfig\":{},\"id\":\"BlueCoat_traffic_Average_ResponseTime\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"39\",\"gridData\":{\"x\":11,\"y\":0,\"w\":27,\"h\":11,\"i\":\"39\"},\"embeddableConfig\":{},\"id\":\"BlueCoat_traffic_HTTPRequestsPerSecond\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"*\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a06e5af0-2c1d-11e7-8c63-7fc12f1d2dcb",
+    "_type": "dashboard",
+    "_source": {
+      "title": "BCEvents_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"col\":1,\"id\":\"08e78a20-2c05-11e7-8d1b-59c7f51e151e\",\"panelIndex\":1,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"9c8256c0-2b38-11e7-9ca1-bf15727ca332\",\"panelIndex\":2,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"id\":\"3266f2a0-2b38-11e7-9ca1-bf15727ca332\",\"panelIndex\":3,\"row\":9,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"4abc4b90-2c1c-11e7-8c63-7fc12f1d2dcb\",\"panelIndex\":4,\"row\":1,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"bf6cecf0-2c1d-11e7-8c63-7fc12f1d2dcb\",\"panelIndex\":5,\"row\":5,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"c363fb40-2c1e-11e7-8c63-7fc12f1d2dcb\",\"panelIndex\":6,\"row\":9,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"}]",
       "optionsJSON": "{\"darkTheme\":false}",
-      "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+      "uiStateJSON": "{\"P-2\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}},\"P-5\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}}}",
       "version": 1,
       "timeRestore": false,
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}],\"highlightAll\":true,\"version\":true}"
       }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "573b6140-9214-11e7-8c4e-ddc3f34698b7",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Checkpoint_Traffic_Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"x\":0,\"y\":36,\"w\":24,\"h\":12,\"i\":\"1\"},\"id\":\"7d8c4c70-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"1\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":24,\"y\":36,\"w\":24,\"h\":12,\"i\":\"2\"},\"id\":\"399501b0-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":24,\"y\":12,\"w\":24,\"h\":12,\"i\":\"3\"},\"id\":\"05956440-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":60,\"w\":24,\"h\":12,\"i\":\"4\"},\"id\":\"f1f6d990-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":24,\"y\":60,\"w\":24,\"h\":12,\"i\":\"5\"},\"id\":\"fc2b2790-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"5\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":48,\"w\":24,\"h\":12,\"i\":\"6\"},\"id\":\"c4ffe220-9212-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"6\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":24,\"w\":24,\"h\":12,\"i\":\"7\"},\"id\":\"992b2e20-9212-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"7\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":12,\"w\":24,\"h\":12,\"i\":\"8\"},\"id\":\"4d592050-9213-11e7-9aa6-35baef0417cd\",\"panelIndex\":\"8\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":24,\"y\":24,\"w\":24,\"h\":12,\"i\":\"9\"},\"id\":\"892e53e0-9216-11e7-8c4e-ddc3f34698b7\",\"panelIndex\":\"9\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":24,\"y\":48,\"w\":24,\"h\":12,\"i\":\"10\"},\"id\":\"08102b70-9217-11e7-8c4e-ddc3f34698b7\",\"panelIndex\":\"10\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":72,\"w\":24,\"h\":12,\"i\":\"11\"},\"id\":\"35f0d080-9221-11e7-8c4e-ddc3f34698b7\",\"panelIndex\":\"11\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"gridData\":{\"x\":0,\"y\":0,\"w\":48,\"h\":12,\"i\":\"12\"},\"version\":\"6.4.1\",\"panelIndex\":\"12\",\"type\":\"visualization\",\"id\":\"1c348130-85e8-11e8-b2a5-b7c59181f0eb\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"default_field\":\"*\",\"query\":\"*\"}}}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "3add82f0-ee50-11e8-bd11-03e4f6eb3ef5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto CRTM Traffic Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":14,\"i\":\"9\",\"w\":8,\"x\":0,\"y\":0},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"9\",\"title\":\"Network Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"L3-Trust\":\"#508642\",\"L3-Untrust\":\"#5195CE\",\"VPN-Sites\":\"#E5AC0E\",\"WiFi-Staff\":\"#BA43A9\"}}},\"gridData\":{\"h\":14,\"i\":\"13\",\"w\":33,\"x\":15,\"y\":0},\"id\":\"2e8b7470-fda2-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"13\",\"title\":\"Network Traffic by Zone\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":14,\"i\":\"15\",\"w\":11,\"x\":23,\"y\":75},\"id\":\"c3f37800-fd7a-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"15\",\"title\":\"URL Categories by Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":13,\"i\":\"16\",\"w\":12,\"x\":35,\"y\":39},\"id\":\"0adfdc50-fd7a-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"16\",\"title\":\"Applications by Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"18\",\"w\":11,\"x\":1,\"y\":39},\"id\":\"34e58e50-fdca-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"18\",\"title\":\"Traffic Source IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}},\"gridData\":{\"h\":22,\"i\":\"20\",\"w\":23,\"x\":0,\"y\":75},\"id\":\"41262f30-ba58-11e8-827b-5db3eadf5be6\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":11,\"x\":24,\"y\":39},\"id\":\"448816c0-fdca-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"23\",\"w\":12,\"x\":12,\"y\":26},\"id\":\"e08732f0-e455-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"24\",\"w\":11,\"x\":1,\"y\":26},\"id\":\"b62ec510-e45d-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"25\",\"w\":11,\"x\":24,\"y\":26},\"id\":\"d78e0360-e45d-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"25\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"26\",\"w\":12,\"x\":12,\"y\":39},\"id\":\"59dff0e0-e45d-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"26\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"27\",\"w\":33,\"x\":15,\"y\":14},\"id\":\"7e8bdf20-e58f-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"27\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"28\",\"w\":15,\"x\":0,\"y\":14},\"id\":\"5184e430-e725-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"28\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":23,\"i\":\"29\",\"w\":19,\"x\":0,\"y\":52},\"id\":\"6e934640-e7e6-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"29\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":23,\"i\":\"30\",\"w\":29,\"x\":19,\"y\":52},\"id\":\"629b4f40-e7e6-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"30\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":7,\"i\":\"31\",\"w\":13,\"x\":35,\"y\":26},\"id\":\"e5e68110-ba57-11e8-827b-5db3eadf5be6\",\"panelIndex\":\"31\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"32\",\"w\":13,\"x\":35,\"y\":33},\"id\":\"fd2bb580-e8cd-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"32\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"33\",\"w\":7,\"x\":8,\"y\":0},\"id\":\"c6bb7a80-5b0c-11e7-8e2b-eb47e6b96b2f\",\"panelIndex\":\"33\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMTraffic\",\"params\":{\"query\":\"PAN-OS_CRTMTraffic\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMTraffic\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Traffic-Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Internet Traffic Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":14,\"i\":\"9\",\"w\":8,\"x\":0,\"y\":0},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"9\",\"title\":\"Network Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"colors\":{\"L3-Trust\":\"#508642\",\"L3-Untrust\":\"#5195CE\",\"VPN-Sites\":\"#E5AC0E\",\"WiFi-Staff\":\"#BA43A9\"}}},\"gridData\":{\"h\":14,\"i\":\"13\",\"w\":33,\"x\":15,\"y\":0},\"id\":\"2e8b7470-fda2-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"13\",\"title\":\"Network Traffic by Zone\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":14,\"i\":\"15\",\"w\":11,\"x\":23,\"y\":75},\"id\":\"c3f37800-fd7a-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"15\",\"title\":\"URL Categories by Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":13,\"i\":\"16\",\"w\":12,\"x\":35,\"y\":39},\"id\":\"0adfdc50-fd7a-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"16\",\"title\":\"Applications by Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":12,\"i\":\"18\",\"w\":11,\"x\":1,\"y\":39},\"id\":\"34e58e50-fdca-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"18\",\"title\":\"Traffic Source IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":3,\"direction\":\"desc\"}}}},\"gridData\":{\"h\":22,\"i\":\"20\",\"w\":23,\"x\":0,\"y\":75},\"id\":\"41262f30-ba58-11e8-827b-5db3eadf5be6\",\"panelIndex\":\"20\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"22\",\"w\":11,\"x\":24,\"y\":39},\"id\":\"448816c0-fdca-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"22\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"23\",\"w\":12,\"x\":12,\"y\":26},\"id\":\"e08732f0-e455-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"23\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"24\",\"w\":11,\"x\":1,\"y\":26},\"id\":\"b62ec510-e45d-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"24\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"25\",\"w\":11,\"x\":24,\"y\":26},\"id\":\"d78e0360-e45d-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"25\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":13,\"i\":\"26\",\"w\":12,\"x\":12,\"y\":39},\"id\":\"59dff0e0-e45d-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"26\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"27\",\"w\":33,\"x\":15,\"y\":14},\"id\":\"7e8bdf20-e58f-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"27\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":12,\"i\":\"28\",\"w\":15,\"x\":0,\"y\":14},\"id\":\"5184e430-e725-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"28\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":23,\"i\":\"29\",\"w\":19,\"x\":0,\"y\":52},\"id\":\"6e934640-e7e6-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"29\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":23,\"i\":\"30\",\"w\":29,\"x\":19,\"y\":52},\"id\":\"629b4f40-e7e6-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"30\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":7,\"i\":\"31\",\"w\":13,\"x\":35,\"y\":26},\"id\":\"e5e68110-ba57-11e8-827b-5db3eadf5be6\",\"panelIndex\":\"31\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":6,\"i\":\"32\",\"w\":13,\"x\":35,\"y\":33},\"id\":\"fd2bb580-e8cd-11e8-96fb-c55aa130b2a3\",\"panelIndex\":\"32\",\"type\":\"visualization\",\"version\":\"6.4.1\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"33\",\"w\":7,\"x\":8,\"y\":0},\"id\":\"c6bb7a80-5b0c-11e7-8e2b-eb47e6b96b2f\",\"panelIndex\":\"33\",\"type\":\"visualization\",\"version\":\"6.4.1\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Traffic\",\"params\":{\"query\":\"PAN-OS_Traffic\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Traffic\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5ab49670-ee57-11e8-bd11-03e4f6eb3ef5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto CRTM System Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":16,\"x\":32,\"y\":15},\"id\":\"81c213d0-fdb4-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"System Logs by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":32,\"x\":0,\"y\":15},\"id\":\"4a9886a0-fdb4-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"System Logs by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":40,\"x\":8,\"y\":0},\"id\":\"52de9c60-fdb8-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Log Entries by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"8\",\"w\":8,\"x\":0,\"y\":0},\"id\":\"31b28690-fdb9-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"8\",\"title\":\"Warnings & Errors\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"9\",\"w\":48,\"x\":0,\"y\":30},\"id\":\"456f93d0-ff7b-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"9\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-system\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMSystem\",\"params\":{\"query\":\"PAN-OS_CRTMSystem\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMSystem\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "f0dbab20-fdb7-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Internet System Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{\"vis\":{\"legendOpen\":true}},\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":16,\"x\":32,\"y\":15},\"id\":\"81c213d0-fdb4-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"System Logs by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":32,\"x\":0,\"y\":15},\"id\":\"4a9886a0-fdb4-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"System Logs by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"spy\":{\"mode\":{\"fill\":false,\"name\":null}}},\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":40,\"x\":8,\"y\":0},\"id\":\"52de9c60-fdb8-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Log Entries by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"8\",\"w\":8,\"x\":0,\"y\":0},\"id\":\"31b28690-fdb9-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"8\",\"title\":\"Warnings & Errors\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"9\",\"w\":48,\"x\":0,\"y\":30},\"id\":\"456f93d0-ff7b-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"9\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-system\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_System\",\"params\":{\"query\":\"PAN-OS_System\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_System\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "a917be20-ee50-11e8-bd11-03e4f6eb3ef5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto CRTM Threat Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":24,\"x\":24,\"y\":15},\"id\":\"15f85080-fdc1-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":0,\"y\":15},\"id\":\"bd2d2f60-fdc1-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Threats by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"3ef8c0c0-fdbf-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":12,\"x\":24,\"y\":0},\"id\":\"7730faa0-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Threats by Destination\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"8\",\"w\":12,\"x\":36,\"y\":0},\"id\":\"c1060a80-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"8\",\"title\":\"Threats by Source\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"10\",\"w\":48,\"x\":0,\"y\":30},\"id\":\"f71e5530-ff7b-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"10\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"index\":\"panos-threat\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMThreat\",\"params\":{\"query\":\"PAN-OS_CRTMThreat\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMThreat\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "12342720-fdc2-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Internet Threat Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":24,\"x\":24,\"y\":15},\"id\":\"15f85080-fdc1-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":24,\"x\":0,\"y\":15},\"id\":\"bd2d2f60-fdc1-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Threats by Type\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":24,\"x\":0,\"y\":0},\"id\":\"3ef8c0c0-fdbf-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":12,\"x\":24,\"y\":0},\"id\":\"7730faa0-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Threats by Destination\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"8\",\"w\":12,\"x\":36,\"y\":0},\"id\":\"c1060a80-fdc6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"8\",\"title\":\"Threats by Source\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"10\",\"w\":48,\"x\":0,\"y\":30},\"id\":\"f71e5530-ff7b-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"10\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"*\"},\"filter\":[{\"meta\":{\"index\":\"panos-threat\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Threat\",\"params\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "82194620-ee57-11e8-bd11-03e4f6eb3ef5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto CRTM Config Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":16,\"x\":32,\"y\":0},\"id\":\"7f3d2bc0-fdb6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"2\",\"title\":\"Config Logs by Command\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":32,\"x\":0,\"y\":0},\"id\":\"9d677dd0-fdb6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Config Logs by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":12,\"x\":0,\"y\":30},\"id\":\"532947b0-fdbd-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Config Changes by Panorama\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":15},\"id\":\"fb3d3160-fdbc-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"Config Changes by Users\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"6\",\"w\":36,\"x\":12,\"y\":15},\"id\":\"ee17eac0-ff79-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"6\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-config\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMConfig\",\"params\":{\"query\":\"PAN-OS_CRTMConfig\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMConfig\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "1ffc31f0-fdbc-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Internet Config Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":16,\"x\":32,\"y\":0},\"id\":\"7f3d2bc0-fdb6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"2\",\"title\":\"Config Logs by Command\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"3\",\"w\":32,\"x\":0,\"y\":0},\"id\":\"9d677dd0-fdb6-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Config Logs by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":12,\"x\":0,\"y\":30},\"id\":\"532947b0-fdbd-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"4\",\"title\":\"Config Changes by Panorama\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":15},\"id\":\"fb3d3160-fdbc-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"Config Changes by Users\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":30,\"i\":\"6\",\"w\":36,\"x\":12,\"y\":15},\"id\":\"ee17eac0-ff79-11e7-9ac0-a903174a3c8d\",\"panelIndex\":\"6\",\"type\":\"search\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-config\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Config\",\"params\":{\"query\":\"PAN-OS_Config\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Config\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "c578b550-ee65-11e8-bd11-03e4f6eb3ef5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto CRTM Overview Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":12,\"y\":0,\"w\":12,\"h\":13,\"i\":\"1\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"4f8f21e0-fd79-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":24,\"y\":0,\"w\":12,\"h\":13,\"i\":\"2\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"c5a60560-fdfb-11e7-be83-eddfa25a06ba\",\"title\":\"URLs by Action\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":36,\"y\":0,\"w\":12,\"h\":13,\"i\":\"3\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"15f85080-fdc1-11e7-be83-eddfa25a06ba\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":13,\"i\":\"4\"},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"title\":\"Total Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":28,\"w\":12,\"h\":15,\"i\":\"9\"},\"id\":\"22307310-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URL Count\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":12,\"y\":28,\"w\":12,\"h\":15,\"i\":\"10\"},\"id\":\"31b28690-fdb9-11e7-be83-eddfa25a06ba\",\"title\":\"System Events - Severity Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":36,\"y\":28,\"w\":12,\"h\":15,\"i\":\"12\"},\"id\":\"feb4b0d0-fdfc-11e7-be83-eddfa25a06ba\",\"title\":\"Threat Events - Severity Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":28,\"w\":12,\"h\":15,\"i\":\"13\"},\"id\":\"253d5860-fdfd-11e7-be83-eddfa25a06ba\",\"title\":\"Config Changes\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":36,\"y\":13,\"w\":12,\"h\":15,\"i\":\"14\"},\"id\":\"51481b10-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":12,\"y\":13,\"w\":12,\"h\":15,\"i\":\"15\"},\"id\":\"45646f60-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":0,\"y\":13,\"w\":12,\"h\":15,\"i\":\"16\"},\"id\":\"49987c20-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Source IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":24,\"y\":13,\"w\":12,\"h\":15,\"i\":\"17\"},\"id\":\"4d93ecb0-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"type\":\"phrases\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMTraffic, PAN-OS_CRTMThreat\",\"params\":[\"PAN-OS_CRTMTraffic\",\"PAN-OS_CRTMThreat\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"tags\":\"PAN-OS_CRTMTraffic\"}},{\"match_phrase\":{\"tags\":\"PAN-OS_CRTMThreat\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "7ef5f150-fdfd-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Internet Overview Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":12,\"y\":0,\"w\":12,\"h\":13,\"i\":\"1\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"4f8f21e0-fd79-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":24,\"y\":0,\"w\":12,\"h\":13,\"i\":\"2\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"c5a60560-fdfb-11e7-be83-eddfa25a06ba\",\"title\":\"URLs by Action\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":36,\"y\":0,\"w\":12,\"h\":13,\"i\":\"3\"},\"embeddableConfig\":{\"vis\":{\"legendOpen\":false}},\"id\":\"15f85080-fdc1-11e7-be83-eddfa25a06ba\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":0,\"w\":12,\"h\":13,\"i\":\"4\"},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"title\":\"Total Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":28,\"w\":12,\"h\":15,\"i\":\"9\"},\"id\":\"22307310-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URL Count\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":12,\"y\":28,\"w\":12,\"h\":15,\"i\":\"10\"},\"id\":\"31b28690-fdb9-11e7-be83-eddfa25a06ba\",\"title\":\"System Events - Severity Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"12\",\"gridData\":{\"x\":36,\"y\":28,\"w\":12,\"h\":15,\"i\":\"12\"},\"id\":\"feb4b0d0-fdfc-11e7-be83-eddfa25a06ba\",\"title\":\"Threat Events - Severity Warning+\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"13\",\"gridData\":{\"x\":0,\"y\":28,\"w\":12,\"h\":15,\"i\":\"13\"},\"id\":\"253d5860-fdfd-11e7-be83-eddfa25a06ba\",\"title\":\"Config Changes\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":36,\"y\":13,\"w\":12,\"h\":15,\"i\":\"14\"},\"id\":\"51481b10-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Threats by Severity\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"15\",\"gridData\":{\"x\":12,\"y\":13,\"w\":12,\"h\":15,\"i\":\"15\"},\"id\":\"45646f60-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"16\",\"gridData\":{\"x\":0,\"y\":13,\"w\":12,\"h\":15,\"i\":\"16\"},\"id\":\"49987c20-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Traffic by Source IP\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"17\",\"gridData\":{\"x\":24,\"y\":13,\"w\":12,\"h\":15,\"i\":\"17\"},\"id\":\"4d93ecb0-fdfe-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-1h",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"type\":\"phrases\",\"key\":\"tags\",\"value\":\"PAN-OS_Traffic, PAN-OS_Threat\",\"params\":[\"PAN-OS_Traffic\",\"PAN-OS_Threat\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"tags\":\"PAN-OS_Traffic\"}},{\"match_phrase\":{\"tags\":\"PAN-OS_Threat\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "7659bbe0-ee65-11e8-bd11-03e4f6eb3ef5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto CRTM URL Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"3\",\"gridData\":{\"x\":12,\"y\":15,\"w\":12,\"h\":15,\"i\":\"3\"},\"id\":\"3f587050-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by Destination\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":24,\"y\":15,\"w\":12,\"h\":15,\"i\":\"4\"},\"id\":\"e43b6ff0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":15,\"w\":12,\"h\":15,\"i\":\"5\"},\"id\":\"6fee55e0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"title\":\"URL Count by Source IP\",\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"6\"},\"id\":\"ecb58ad0-fde8-11e7-be83-eddfa25a06ba\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":55,\"w\":12,\"h\":15,\"i\":\"7\"},\"id\":\"22307310-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":12,\"y\":55,\"w\":12,\"h\":15,\"i\":\"8\"},\"id\":\"77480ca0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":55,\"w\":24,\"h\":15,\"i\":\"9\"},\"id\":\"f679d8f0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":36,\"y\":15,\"w\":12,\"h\":15,\"i\":\"10\"},\"id\":\"6d55ff20-fde5-11e7-be83-eddfa25a06ba\",\"title\":\"Top 10 URLs\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":30,\"w\":48,\"h\":25,\"i\":\"11\"},\"id\":\"37ee9780-fde9-11e7-be83-eddfa25a06ba\",\"title\":\"Top 10 Destinations\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"14\"},\"version\":\"6.3.2\",\"type\":\"visualization\",\"id\":\"201ac220-b827-11e8-827b-5db3eadf5be6\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-threat\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMThreat\",\"params\":{\"query\":\"PAN-OS_CRTMThreat\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMThreat\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ddfa5fb0-fde9-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Internet URL Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"3\",\"gridData\":{\"x\":12,\"y\":15,\"w\":12,\"h\":15,\"i\":\"3\"},\"id\":\"3f587050-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by Destination\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":24,\"y\":15,\"w\":12,\"h\":15,\"i\":\"4\"},\"id\":\"e43b6ff0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":15,\"w\":12,\"h\":15,\"i\":\"5\"},\"id\":\"6fee55e0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"URL Count by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"title\":\"URL Count by Source IP\",\"panelIndex\":\"6\",\"gridData\":{\"x\":0,\"y\":0,\"w\":24,\"h\":15,\"i\":\"6\"},\"id\":\"ecb58ad0-fde8-11e7-be83-eddfa25a06ba\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":0,\"y\":55,\"w\":12,\"h\":15,\"i\":\"7\"},\"id\":\"22307310-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":12,\"y\":55,\"w\":12,\"h\":15,\"i\":\"8\"},\"id\":\"77480ca0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by Category\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"9\",\"gridData\":{\"x\":24,\"y\":55,\"w\":24,\"h\":15,\"i\":\"9\"},\"id\":\"f679d8f0-fde8-11e7-be83-eddfa25a06ba\",\"title\":\"Blocked URLs by User\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"10\",\"gridData\":{\"x\":36,\"y\":15,\"w\":12,\"h\":15,\"i\":\"10\"},\"id\":\"6d55ff20-fde5-11e7-be83-eddfa25a06ba\",\"title\":\"Top 10 URLs\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"11\",\"gridData\":{\"x\":0,\"y\":30,\"w\":48,\"h\":25,\"i\":\"11\"},\"id\":\"37ee9780-fde9-11e7-be83-eddfa25a06ba\",\"title\":\"Top 10 Destinations\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"panelIndex\":\"14\",\"gridData\":{\"x\":24,\"y\":0,\"w\":24,\"h\":15,\"i\":\"14\"},\"version\":\"6.3.2\",\"type\":\"visualization\",\"id\":\"201ac220-b827-11e8-827b-5db3eadf5be6\",\"embeddableConfig\":{}}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-15m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-threat\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Threat\",\"params\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Threat\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "13df50b0-ee65-11e8-bd11-03e4f6eb3ef5",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto CRTM Application Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"1\",\"w\":36,\"x\":12,\"y\":0},\"id\":\"4f8f21e0-fd79-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"1\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":12,\"x\":36,\"y\":15},\"id\":\"0adfdc50-fd7a-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"2\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":30,\"i\":\"3\",\"w\":24,\"x\":0,\"y\":15},\"id\":\"a83b53e0-fd79-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Top 10 Applications\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":12,\"x\":24,\"y\":15},\"id\":\"Top-10-Applications-(Sum-of-Bytes-Transferred)\",\"panelIndex\":\"4\",\"title\":\"Unusual Applications\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":0},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"Total Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":12,\"x\":24,\"y\":30},\"id\":\"a58750a0-fdeb-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"Applications by Protocol\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":12,\"x\":36,\"y\":30},\"id\":\"bc35e500-fdeb-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Traffic by PANW Rule\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-30m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_CRTMTraffic\",\"params\":{\"query\":\"PAN-OS_CRTMTraffic\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_CRTMTraffic\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "857150a0-fdea-11e7-be83-eddfa25a06ba",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Palo Alto Internet Application Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"gridData\":{\"h\":15,\"i\":\"1\",\"w\":36,\"x\":12,\"y\":0},\"id\":\"4f8f21e0-fd79-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"1\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"2\",\"w\":12,\"x\":36,\"y\":15},\"id\":\"0adfdc50-fd7a-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"2\",\"title\":\"Traffic by Application\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}},\"gridData\":{\"h\":30,\"i\":\"3\",\"w\":24,\"x\":0,\"y\":15},\"id\":\"a83b53e0-fd79-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"3\",\"title\":\"Top 10 Applications\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"4\",\"w\":12,\"x\":24,\"y\":15},\"id\":\"Top-10-Applications-(Sum-of-Bytes-Transferred)\",\"panelIndex\":\"4\",\"title\":\"Unusual Applications\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"5\",\"w\":12,\"x\":0,\"y\":0},\"id\":\"f420b810-fd77-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"5\",\"title\":\"Total Traffic\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"6\",\"w\":12,\"x\":24,\"y\":30},\"id\":\"a58750a0-fdeb-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"6\",\"title\":\"Applications by Protocol\",\"type\":\"visualization\",\"version\":\"6.3.2\"},{\"gridData\":{\"h\":15,\"i\":\"7\",\"w\":12,\"x\":36,\"y\":30},\"id\":\"bc35e500-fdeb-11e7-be83-eddfa25a06ba\",\"panelIndex\":\"7\",\"title\":\"Traffic by PANW Rule\",\"type\":\"visualization\",\"version\":\"6.3.2\"}]",
+      "optionsJSON": "{\"darkTheme\":true,\"hidePanelTitles\":false,\"useMargins\":false}",
+      "version": 1,
+      "timeRestore": true,
+      "timeTo": "now",
+      "timeFrom": "now-30m",
+      "refreshInterval": {
+        "pause": true,
+        "value": 0
+      },
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[{\"meta\":{\"index\":\"panos-traffic\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"tags\",\"value\":\"PAN-OS_Traffic\",\"params\":{\"query\":\"PAN-OS_Traffic\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"tags\":{\"query\":\"PAN-OS_Traffic\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Metricbeat-system-overview",
+    "_type": "dashboard",
+    "_source": {
+      "description": "Overview of system metrics",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"System-Navigation\", \"size_x\": 12, \"size_y\": 1, \"panelIndex\": 9, \"col\": 1, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"c6f2ffd0-4d17-11e7-a196-69b9a7a020a9\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 11, \"col\": 1, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"fe064790-1b1f-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 6, \"size_y\": 5, \"panelIndex\": 12, \"col\": 7, \"row\": 4}, {\"type\": \"visualization\", \"id\": \"855899e0-1b1c-11e7-b09e-037021c4f8df\", \"size_x\": 6, \"size_y\": 5, \"panelIndex\": 13, \"col\": 1, \"row\": 4}, {\"type\": \"visualization\", \"id\": \"7cdb1330-4d1a-11e7-a196-69b9a7a020a9\", \"size_x\": 12, \"size_y\": 6, \"panelIndex\": 14, \"col\": 1, \"row\": 9}, {\"type\": \"visualization\", \"id\": \"522ee670-1b92-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 16, \"col\": 9, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"1aae9140-1b93-11e7-8ada-3df93aab833e\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 17, \"col\": 11, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"825fdb80-4d1d-11e7-b5f2-2b7c1895bf32\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 18, \"col\": 7, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"d3166e80-1b91-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 19, \"col\": 5, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"83e12df0-1b91-11e7-bec4-a5e9ec5cab8b\", \"size_x\": 2, \"size_y\": 2, \"panelIndex\": 20, \"col\": 3, \"row\": 2}]",
+      "timeRestore": false,
+      "title": "[Metricbeat System] Overview",
+      "uiStateJSON": "{\"P-16\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}, \"P-14\": {\"vis\": {\"defaultColors\": {\"45% - 60%\": \"rgb(35,139,69)\", \"30% - 45%\": \"rgb(116,196,118)\", \"15% - 30%\": \"rgb(199,233,192)\", \"0% - 15%\": \"rgb(247,252,245)\"}}}, \"P-12\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}, \"P-2\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}, \"P-3\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}, \"P-11\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Filebeat-Logstash-Log-Dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "description": "",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"0b1dace0-cbdb-11e7-9852-73e0a9df1bb6\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 2, \"col\": 7, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"e90b7240-cbda-11e7-9852-73e0a9df1bb6\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 3, \"col\": 1, \"row\": 1}, {\"sort\": [\"@timestamp\", \"desc\"], \"type\": \"search\", \"id\": \"cfaba090-cbda-11e7-9852-73e0a9df1bb6\", \"size_x\": 12, \"size_y\": 10, \"panelIndex\": 4, \"col\": 1, \"columns\": [\"logstash.log.level\", \"logstash.log.module\", \"logstash.log.message\", \"source\"], \"row\": 4}]",
+      "timeRestore": false,
+      "title": "Logstash Logs [Filebeat Logstash]",
+      "uiStateJSON": "{}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "0d3f2380-fa78-11e6-ae9b-81e5311e8cab",
+    "_type": "dashboard",
+    "_source": {
+      "description": "New users and groups dashboard for the System module in Filebeat",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"f398d2f0-fa77-11e6-ae9b-81e5311e8cab\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 1, \"col\": 1, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"5dd15c00-fa78-11e6-ae9b-81e5311e8cab\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 2, \"col\": 7, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"e121b140-fa78-11e6-a1df-a78bd7504d38\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 3, \"col\": 1, \"row\": 5}, {\"type\": \"visualization\", \"id\": \"d56ee420-fa79-11e6-a1df-a78bd7504d38\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 4, \"col\": 7, \"row\": 5}, {\"type\": \"visualization\", \"id\": \"12667040-fa80-11e6-a1df-a78bd7504d38\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 5, \"col\": 1, \"row\": 8}, {\"type\": \"visualization\", \"id\": \"346bb290-fa80-11e6-a1df-a78bd7504d38\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 6, \"col\": 7, \"row\": 8}, {\"type\": \"visualization\", \"id\": \"327417e0-8462-11e7-bab8-bd2f0fb42c54\", \"size_x\": 12, \"size_y\": 1, \"panelIndex\": 7, \"col\": 1, \"row\": 1}]",
+      "timeRestore": false,
+      "title": "[Filebeat System] New users and groups",
+      "uiStateJSON": "{\"P-5\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"P-1\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "5517a150-f9ce-11e6-8115-a7c18106d86a",
+    "_type": "dashboard",
+    "_source": {
+      "description": "SSH dashboard for the System module in Filebeat",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"d16bb400-f9cc-11e6-8115-a7c18106d86a\", \"size_x\": 12, \"size_y\": 3, \"panelIndex\": 1, \"col\": 1, \"row\": 5}, {\"type\": \"visualization\", \"id\": \"78b74f30-f9cd-11e6-8115-a7c18106d86a\", \"size_x\": 12, \"size_y\": 3, \"panelIndex\": 2, \"col\": 1, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"341ffe70-f9ce-11e6-8115-a7c18106d86a\", \"size_x\": 6, \"size_y\": 4, \"panelIndex\": 3, \"col\": 1, \"row\": 8}, {\"type\": \"visualization\", \"id\": \"3cec3eb0-f9d3-11e6-8a3e-2b904044ea1d\", \"size_x\": 6, \"size_y\": 4, \"panelIndex\": 4, \"col\": 7, \"row\": 8}, {\"sort\": [\"@timestamp\", \"desc\"], \"type\": \"search\", \"id\": \"62439dc0-f9c9-11e6-a747-6121780e0414\", \"size_x\": 12, \"size_y\": 3, \"panelIndex\": 5, \"col\": 1, \"columns\": [\"system.auth.ssh.event\", \"system.auth.ssh.method\", \"system.auth.user\", \"system.auth.ssh.ip\", \"system.auth.ssh.geoip.country_iso_code\"], \"row\": 12}, {\"type\": \"visualization\", \"id\": \"327417e0-8462-11e7-bab8-bd2f0fb42c54\", \"size_x\": 12, \"size_y\": 1, \"panelIndex\": 6, \"col\": 1, \"row\": 1}]",
+      "timeRestore": false,
+      "title": "[Filebeat System] SSH login attempts",
+      "uiStateJSON": "{\"P-4\": {\"mapCenter\": [39.774769485295465, 23.203125], \"mapCollar\": {\"zoom\": 3, \"bottom_right\": {\"lat\": -14.777884999999998, \"lon\": 125.771485}, \"top_left\": {\"lat\": 85.593335, \"lon\": -79.189455}}, \"mapBounds\": {\"bottom_right\": {\"lat\": 10.31491928581316, \"lon\": 74.53125}, \"top_left\": {\"lat\": 60.50052541051131, \"lon\": -27.94921875}}, \"mapZoom\": 3}}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "Filebeat-syslog-dashboard",
+    "_type": "dashboard",
+    "_source": {
+      "description": "Syslog dashboard from the Filebeat System module",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+      },
+      "optionsJSON": "{\"darkTheme\": false}",
+      "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"Syslog-events-by-hostname\", \"size_x\": 8, \"size_y\": 4, \"panelIndex\": 1, \"col\": 1, \"row\": 2}, {\"type\": \"visualization\", \"id\": \"Syslog-hostnames-and-processes\", \"size_x\": 4, \"size_y\": 4, \"panelIndex\": 2, \"col\": 9, \"row\": 2}, {\"sort\": [\"@timestamp\", \"desc\"], \"type\": \"search\", \"id\": \"Syslog-system-logs\", \"size_x\": 12, \"size_y\": 7, \"panelIndex\": 3, \"col\": 1, \"columns\": [\"system.syslog.hostname\", \"system.syslog.program\", \"system.syslog.message\"], \"row\": 6}, {\"type\": \"visualization\", \"id\": \"327417e0-8462-11e7-bab8-bd2f0fb42c54\", \"size_x\": 12, \"size_y\": 1, \"panelIndex\": 4, \"col\": 1, \"row\": 1}]",
+      "timeRestore": false,
+      "title": "[Filebeat System] Syslog dashboard",
+      "uiStateJSON": "{}",
+      "version": 1
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "d752ecb0-341e-11e9-b79a-579e1147c51c",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Checkpoint_Dashboard_VPN_Aplicaciones_Justicia",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"h\":23,\"i\":\"1\",\"w\":34,\"x\":13,\"y\":0},\"id\":\"66f80650-341c-11e9-b79a-579e1147c51c\",\"panelIndex\":\"1\",\"type\":\"search\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":9,\"i\":\"2\",\"w\":6,\"x\":0,\"y\":0},\"id\":\"30710fd0-341e-11e9-b79a-579e1147c51c\",\"panelIndex\":\"2\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":9,\"i\":\"3\",\"w\":7,\"x\":6,\"y\":0},\"id\":\"872bf920-341e-11e9-b79a-579e1147c51c\",\"panelIndex\":\"3\",\"type\":\"visualization\",\"version\":\"6.5.4\"},{\"embeddableConfig\":{},\"gridData\":{\"h\":14,\"i\":\"4\",\"w\":13,\"x\":0,\"y\":9},\"id\":\"573f5240-3426-11e9-b79a-579e1147c51c\",\"panelIndex\":\"4\",\"type\":\"visualization\",\"version\":\"6.5.4\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"lucene\"},\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"checkpoint-traffic-logs\",\"key\":\"device-name\",\"negate\":false,\"params\":{\"query\":\"fw-extra-institucional\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"fw-extra-institucional\"},\"query\":{\"match\":{\"device-name\":{\"query\":\"fw-extra-institucional\",\"type\":\"phrase\"}}}},{\"meta\":{\"index\":\"checkpoint-traffic-logs\",\"type\":\"phrases\",\"key\":\"user_group\",\"value\":\"SSLVPN_LDAP_APLICACIONES-JUSTICIA, SSLVPN_ROL_GAR-APLICACIONES-JUSTICIA\",\"params\":[\"SSLVPN_LDAP_APLICACIONES-JUSTICIA\",\"SSLVPN_ROL_GAR-APLICACIONES-JUSTICIA\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"user_group\":\"SSLVPN_LDAP_APLICACIONES-JUSTICIA\"}},{\"match_phrase\":{\"user_group\":\"SSLVPN_ROL_GAR-APLICACIONES-JUSTICIA\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}]}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
     }
   }
 ]
