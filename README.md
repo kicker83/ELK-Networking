@@ -32,4 +32,6 @@ content
 Visualizations (import json on kibana -> Management -> Saved objects)
 
 Dashboards (import json on kibana -> Management -> Saved objects)
+
+Searches (import json on kibana -> Management -> Saved objects)
   
