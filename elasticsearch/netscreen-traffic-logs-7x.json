@@ -1,0 +1,19 @@
+PUT /_template/netscreen-logs
+{  
+  "index_patterns": ["netscreen-logs-*"],
+    "settings" : {
+      "number_of_shards" : 3,
+		"number_of_replicas" : 0,
+		"index.refresh_interval" : "10s"
+       },
+       "mappings" : {
+  	    "properties" : {
+    	    "sent":{
+    		"type":"long"
+    	    },
+    	    "rcvd":{
+    		"type":"long"
+    	    }
+	   }
+   }
+}
