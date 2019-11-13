@@ -1,0 +1,713 @@
+### TEMPLATE PAN-TRAFFIC
+PUT /_template/pan-traffic
+{  
+	"index_patterns": ["pan-traffic-*"],
+	"settings" : {
+		"number_of_shards" : 3,
+		"number_of_replicas" : 0,
+		"index.refresh_interval" : "10s"
+	},
+	"mappings" : {
+		"properties" : {
+		  "@timestamp" : {
+			"type" : "date"
+		  },
+		  "@version" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		},
+	  "Action":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	  },
+	  "Application" : {
+		"type" : "text",
+		"fields" : {
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	  },
+	  "Bytes" : {
+		"type" : "long"
+	  },
+	  "BytesReceived" : {
+		"type" : "long"
+	  },
+	  "BytesSent" : {
+		"type" : "long"
+	  },
+	  "Category" : {
+		"type" : "text",
+		"fields" : {
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	  },
+	  "ConfigVersion" : {
+		"type" : "text",
+		"fields" : {
+		  "keyword" : {
+			"type" : "keyword",
+			"index": "false"
+		  }
+		}
+	  },
+	"DestinationAddress":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"DestinationCountry":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"DestinationGeo":{
+		"dynamic":"true",
+		"properties":{
+			"area_code":{
+				"type":"long"
+			},
+			"city_name":{
+				"type":"keyword",
+				"norms": "false",
+				"fields" : {
+			 	  "keyword" : {
+                			"type" : "keyword",
+                			"ignore_above" : 256,
+                			"index" : "false"
+				   }
+			  }
+			},
+			"continent_code":{
+				"type":"keyword",
+				"norms": "false",
+				"fields":{
+				   "keyword" : {					  
+					"type":"keyword",
+					"index":"false",
+					"ignore_above":256
+				    }
+				}
+			},
+			"country_code2":{
+				"type":"keyword",
+				"norms": "false",
+				"fields":{
+				 "keyword" : {
+					"type":"keyword",
+					"index":"false",
+					"ignore_above":256
+				 }
+			  }
+			},
+			"country_code3":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+					 "keyword" : {
+						 "type":"keyword",
+						 "index":"false",
+						 "ignore_above":256
+					  }
+					}
+			},
+			"country_name":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+					  "keyword" : {
+						 "type":"keyword",
+						 "index":"false",
+						 "ignore_above":256
+					  }
+					}
+			},
+			"dma_code":{
+					"type":"long"
+			},
+			"ip":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+					 "keyword" : {
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
+					}
+			},
+			"latitude":{
+					"type":"double"
+			},
+			"location":{
+					"type":"geo_point"
+			},
+			"longitude":{
+					"type":"double"
+			},
+			"postal_code":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+					 "keyword" : {
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
+					}
+			},
+			"real_region_name":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+           "keyword" : {
+						 "type":"keyword",
+						 "index":"false",
+						 "ignore_above":256
+           }	
+					}
+			},
+			"region_name":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+					 "keyword" : {				  
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
+					}
+			},
+			"timezone":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+					 "keyword" : {					  
+						"type":"keyword",
+						"index":"false",
+						"ignore_above":256
+					 }
+					}
+			}
+		}
+	},
+	"DestinationPort":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"DestinationUser":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"DestinationZone":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"ElapsedTimeInSec":{
+		"type":"long"
+	},
+	"Flags":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			 "type" : "keyword",
+			 "index" : "false"
+		  }
+		}
+	},
+	"GenerateTime":{
+		"type":"date"
+		},
+		"InboundInterface":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"LogAction":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"NATDestinationIP":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"NATDestinationPort":{
+			"type":"long"
+		},
+		"NATSourceIP":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"NATSourcePort":{
+			"type":"long"
+		},
+		"OutboundInterface":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"Packets":{
+			"type":"long"
+		},
+		"Padding":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"PaloAltoDomain":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"ReceiveTime":{
+			"type":"date",
+			"format":"yyyy/MM/dd HH:mm:ss||yyyy/MM/dd"
+		},
+		"RepeatCount":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"Rule":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			   "keyword" : {
+				 "type" : "keyword"
+			  }
+			}
+		},
+		"SerialNum":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"SessionID":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"SourceAddress":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		},
+		"SourceCountry":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		},
+		"SourceGeo":{
+			"dynamic":"true",
+			"properties":{
+				"area_code":{
+						"type":"long"
+				},
+				"city_name":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"continent_code":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"country_code2":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"country_code3":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"country_name":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"dma_code":{
+						"type":"long"
+				},
+				"ip":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"latitude":{
+						"type":"double"
+				},
+				"location":{
+						"type":"geo_point"
+				},
+				"longitude":{
+						"type":"double"
+				},
+				"postal_code":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"real_region_name":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+						}
+				},
+				"region_name":{
+						"type":"keyword",
+						"norms": "false",
+						"fields":{
+					   "keyword" : {						  
+							"type":"keyword",
+							"index":"false"
+					   }
+				}
+			},
+			"timezone":{
+					"type":"keyword",
+					"norms": "false",
+					"fields":{
+					 "keyword" : {					  
+						"type":"keyword",
+						"index":"false"
+					 }
+					}
+			}
+		}
+	},
+	"SourcePort":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"SourceUser":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"SourceZone":{
+		"type":"text",
+		"norms": "false",
+		"fields":{
+		  "keyword" : {
+			"type" : "keyword"
+		  }
+		}
+	},
+	"StartTime":{
+		"type":"date",
+		"format":"yyyy/MM/dd HH:mm:ss||yyyy/MM/dd"
+		},
+		  "Subtype" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		"TimeLogged":{
+			"type":"date",
+			"format":"yyyy/MM/dd HH:mm:ss||yyyy/MM/dd"
+		},
+		"Type":{
+			"type":"text",
+			"norms": "false",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		},
+		  "VirtualSystem" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		  "action_source" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		"actionflags":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		},
+		"cpadding":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		  "device_name" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		  "dg_hier_level_1" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		  "dg_hier_level_2" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		  "dg_hier_level_3" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		  "dg_hier_level_4" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		"fingerprint":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"host":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"path":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		"pkts_received":{
+			"type":"long"
+		},
+		"pkts_sent":{
+			"type":"long"
+		},
+		"seqno":{
+			"type":"long"
+		},
+		"syslog_host":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		},
+		  "tags" : {
+			"type" : "text",
+			"fields" : {
+			   "keyword" : {
+				 "type" : "keyword"
+			  }
+			}
+		  },
+		"type":{
+			"type":"text",
+			"norms": "false",
+			"fields":{
+			  "keyword" : {
+				 "type" : "keyword",
+				 "index" : "false"
+			  }
+			}
+		}
+	  }
+  }
+}
