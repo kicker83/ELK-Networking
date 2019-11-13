@@ -1,0 +1,168 @@
+### TEMPLATE PAN-URL
+PUT /_template/pan-url
+{  
+	"index_patterns": ["pan-url-*"],
+	"settings" : {
+		"number_of_shards" : 3,
+		"number_of_replicas" : 0,
+		"index.refresh_interval" : "10s"
+	},
+	"mappings" : {
+		"properties" : {
+		  "@timestamp" : {
+			"type" : "date"
+		  },
+		  "@version" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "URIHost" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "URIPath" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "action" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "application" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		  "category" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword"
+			  }
+			}
+		  },
+		  "destinationIP" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "firewall" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "firewallIP" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "host" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "path" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "port" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "sourceIP" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "tags" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "type" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "user" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  },
+		  "user-agent" : {
+			"type" : "text",
+			"fields" : {
+			  "keyword" : {
+				"type" : "keyword",
+				"ignore_above" : 256
+			  }
+			}
+		  }
+		}
+  }
+}
